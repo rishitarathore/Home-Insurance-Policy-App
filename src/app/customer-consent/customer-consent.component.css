@@ -1,0 +1,16 @@
+.list
+{
+    padding-left: 17px;
+}
+button
+{
+    background-color: red;
+    color: white;
+}
+h1{
+    color:#dc143c;
+}
+hr{
+    background-color: white;
+    border-top:2px dotted #ff2f2f;
+}

@@ -1,0 +1,78 @@
+<app-progress-bar></app-progress-bar>
+<div class="container col-7">
+    <h1>
+        <p class="text-center font-weight-normal mt-4" id="text-custom">Other Details</p>
+      </h1>
+      <hr class="dotted-line"/>
+      <form>
+        <div class="form-group">
+        <p class="text-justify font-weight-bold mb-0">Build-In Appliances</p> 
+        <div class="checkbox">
+            <label class="mb-0"><input type="checkbox" value="Refrigerator" class="mr-1">Refrigerator</label>
+        </div>
+
+        <div class="checkbox">
+            <label class="mb-0"><input type="checkbox" value="Microwave/Oven" class="mr-1">Microwave/Oven</label>
+        </div>
+
+        <div class="checkbox">
+            <label class="mb-0"><input type="checkbox" value="Solar Geyser" class="mr-1">Solar Geyser</label>
+        </div>
+
+        <div class="checkbox">
+            <label class="mb-0"><input type="checkbox" value="Heating/Cooling System" class="mr-1">Heating/Cooling System</label>
+        </div>  
+        
+        <p class="text-justify font-weight-bold mb-0 mt-3">Utilities</p> 
+
+        <div class="checkbox">
+            <label class="mb-0"><input type="checkbox" value="Refrigerator" class="mr-1">Borewell</label>
+        </div>
+
+        <div class="checkbox">
+            <label class="mb-0"><input type="checkbox" value="Microwave/Oven" class="mr-1">Septic Tank</label>
+        </div>
+
+        <div class="checkbox">
+            <label class="mb-0"><input type="checkbox" value="Solar Geyser" class="mr-1">Public Water</label>
+        </div>
+
+        <div class="checkbox">
+            <label class="mb-0"><input type="checkbox" value="Heating/Cooling System" class="mr-1">Public Sewer</label>
+        </div>  
+
+        <label class="text-justify font-weight-bold mb-0 mt-3 pb-1">Garage</label>
+        <div>
+            <select name="select" class="form-control" id="custom-select">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+        </div>
+
+        <label class="text-justify font-weight-bold mb-0 mt-3 pb-1">Security System</label>
+        <div>
+            <select name="select" class="form-control" id="custom-select">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+        </div>
+
+        <label class="text-justify font-weight-bold mb-0 mt-3 pb-1">Wiring to House</label>
+        <div>
+            <select name="select" class="form-control" id="custom-select">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+        </div>
+    </div>
+</form>
+    <br>
+  
+    <div class="container">
+        <div class="row">
+          <div class="col pl-0">
+            <button class="rounded-pill btn-block" id="btn-custom" (click)= "prev()" >Back</button></div>
+          <div class="col pr-0">
+            <button class="rounded-pill btn-block" id="btn-custom">Continue</button></div>
+        </div>  
+</div>

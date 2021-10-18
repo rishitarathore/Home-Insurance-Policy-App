@@ -1,0 +1,28 @@
+#text-custom{
+    color: #dc143c;  
+}
+
+hr.dotted-line{
+    background-color: #fff;
+	border-top: 2px dotted #ff2f2f;
+}
+
+#custom-select{
+    border-radius: 10px;
+}
+
+#btn-custom{
+    color: #fff;
+    background-color: #ff0000;
+    border-color: #939393;
+}  
+
+.form-check{
+    padding-left: 0rem;
+}
+
+#checkbox-custom{
+    margin-left: 0px;
+    padding-top: 12px;
+    margin-top: 7px;
+}

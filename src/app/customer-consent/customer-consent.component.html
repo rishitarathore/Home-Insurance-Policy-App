@@ -1,0 +1,26 @@
+<app-progress-bar></app-progress-bar>
+<div class="container col-md-7">
+    <h1 class="text-center" >Get Customer Consent</h1>
+    <hr >
+      Please read the following:<br>
+    In order to determine your eligibility and/or rate, we'll use information from a customer reporting agency that may include:
+  <ul class="list">
+      <li>Credit information on a member in your household.</li>
+      <li>Loss history information on all named applications.</li>
+  </ul>
+  Would you like more information?
+  <p style="font-weight: bold;" >Contact our nearest branch or agency</p><br>
+  <div>
+  <label class="checkbox-inline">
+        <input type='checkbox' onchange="document.getElementById('bt').disabled = !this.checked;"
+        name='agree' id='agree' value=''> I have read the required notification to the customer and understand customer reports cannot be run before I provide this notification.</label>
+  </div>
+    <div class= "row">
+        <div class="col">
+            <button type="button"  class="rounded-pill btn-block" id="bt1"(click)= "prev()" >Back</button>
+        </div>
+        <div class="col ">
+            <button type="button" class="rounded-pill btn-block" id="bt" (click)="next()" disabled>Continue</button>
+        </div>
+  </div>
+  </div>
