@@ -1,0 +1,58 @@
+img{
+    height: 50px;
+    width: 50px;
+}
+.vr
+{
+    height: 300px;
+    border-left:1px solid green;
+}
+#col1
+{
+    padding-top: 50px;
+}
+#col2
+{
+    padding-top:20px;
+}
+.text-center.tc{
+    color:rgb(211, 94, 94);
+    padding-bottom: 25px;
+}
+#p1
+{
+    color: gold;
+    text-shadow: -1px -1px 0, 1px -1px 0 rgb(152, 243, 14), -1px 1px 0 greenyellow, 2px 2px 0 black ;
+}
+#bt
+{
+    background-color: skyblue;
+    color:rebeccapurple;
+    font-weight: bold;
+}
+hr
+{
+    background-color:white;
+    border:1px dotted red;
+}
+#p2
+{
+    text-shadow: -1px -1px 0, 1px -1px 0 rgb(152, 243, 14), -1px 1px 0 greenyellow, 2px 2px 0 darkslategray;
+}
+.container.col-md-7
+{
+    padding-top:20px;
+}
+.tr2
+{
+    font-weight: bold;
+}
+
+.container.col4
+{
+    background-color: #ECECEC;
+}
+button{
+    background-color: red;
+    color:white;
+}

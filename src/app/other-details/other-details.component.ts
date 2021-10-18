@@ -18,4 +18,11 @@ export class OtherDetailsComponent implements OnInit {
     this.router.navigate(['customer-consent']);
   }
 
+  next()
+  {
+    this.router.navigate(['check-out']);
+
+  }
+
+
 }
