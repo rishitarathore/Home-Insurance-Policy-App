@@ -52,7 +52,12 @@ hr
 {
     background-color: #ECECEC;
 }
-button{
+#bt6{
     background-color: red;
     color:white;
+}
+.border
+{
+    display: inline-block;
+    border-color: grey;
 }
