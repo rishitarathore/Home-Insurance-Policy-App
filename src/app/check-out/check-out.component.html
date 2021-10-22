@@ -41,19 +41,23 @@
     </div>
     <hr/>
     <div>
-    <div class="row">
-        <div class="col-8">
-
+    <div class=" row">
+        <div class="container col-8">
+            
             <p style="font-weight: bold;">Do you want add Vehicle Insurance</p>
             <p id="p1" >(get 5% off on premium)</p>
-             <span class="border">
               <div class="btn-group" role="group" >
-                <div>
-                <button class="button" id="yes" class="btn btn-success" onclick="document.getElementById('no').setAttribute('disabled',true);">Yes</button></div>
-                <div>
-                <button type="button" id="no" class="btn btn-danger" onclick="document.getElementById('yes').setAttribute('disabled',true);">No</button></div>
-              </div>  
-            </span>
+                <button  type="button" id="yes"  class="btn btn-success" onclick="fun()">Yes</button>
+                <script>
+                  function fun(){
+                  document.getElementById('no').setAttribute('disabled',true);
+                  show('data');
+                  }
+                </script>
+                 <button type="button" id="no" class="btn btn-danger" onclick="document.getElementById('yes').setAttribute('disabled',true);">No</button>
+                  <div id="data">You got 5% premium.</div>
+                </div>
+            
         </div>
         <div class="col-4">
             <p id="p2" style="font-size: 20px;color: skyblue;">Promo <br>

@@ -7,6 +7,8 @@ import { CustomerConsentComponent } from './customer-consent/customer-consent.co
 import { OtherDetailsComponent } from './other-details/other-details.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { CheckOutComponent } from './check-out/check-out.component';
+import { HomeStructureDetailsComponent } from './home-structure-details/home-structure-details.component';
+import { GetStartedComponent } from './get-started/get-started.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { CheckOutComponent } from './check-out/check-out.component';
     CustomerConsentComponent,
     OtherDetailsComponent,
     ProgressBarComponent,
-    CheckOutComponent
+    CheckOutComponent,
+    HomeStructureDetailsComponent,
+    GetStartedComponent,
   ],
   imports: [
     BrowserModule,

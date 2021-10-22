@@ -16,7 +16,7 @@ img{
     padding-top:20px;
 }
 .text-center.tc{
-    color:rgb(211, 94, 94);
+    color: #dc143c;  
     padding-bottom: 25px;
 }
 #p1
@@ -56,8 +56,11 @@ hr
     background-color: red;
     color:white;
 }
-.border
-{
-    display: inline-block;
-    border-color: grey;
+#data {
+    display: none;
+    background: green;
+    height: 100px;
+    width: 200px;
+    margin: 0 auto;
+    color: white;
 }

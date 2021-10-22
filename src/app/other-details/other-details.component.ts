@@ -15,7 +15,7 @@ export class OtherDetailsComponent implements OnInit {
 
   prev()
   {
-    this.router.navigate(['customer-consent']);
+    this.router.navigate(['home-structure-details']);
   }
 
   next()
