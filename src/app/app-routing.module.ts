@@ -3,13 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { CustomerConsentComponent } from './customer-consent/customer-consent.component';
 import { OtherDetailsComponent } from './other-details/other-details.component';
 import { CheckOutComponent } from './check-out/check-out.component';
+import { GetStartedComponent } from './get-started/get-started.component';
+import { HomeStructureDetailsComponent } from './home-structure-details/home-structure-details.component';
 
 const routes: Routes = [
+  { path: 'get-started', component:GetStartedComponent },
+
   { path: 'customer-consent', component:CustomerConsentComponent },
   { path: 'other-details', component:OtherDetailsComponent},
   { path: 'check-out', component:CheckOutComponent},
+  { path: 'home-structure-details', component:HomeStructureDetailsComponent },
 
-  { path: '',   redirectTo: '/customer-consent', pathMatch: 'full' }, 
+  { path: '',   redirectTo: '/get-started', pathMatch: 'full' }, 
    // Wildcard route for a 404 page
 ];
 

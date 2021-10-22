@@ -1,0 +1,70 @@
+<div class="main">
+    <form >
+             
+    <div class="content">
+        <div class="bar">
+
+            <div class="progress" aria-valuemin="0" aria-valuemax="100" style ="width:50%">50%</div>
+        
+        </div>
+        <div class="dotline">
+        
+            <h1>Home Structure Details</h1>
+        
+        </div>
+    
+        <br>
+    
+    <div class="form-group">
+        <label class="field name">Complete Address</label>
+        <textarea class="form-control" rows="3" type="text" required ></textarea>
+    </div>
+    
+    <div class="form-group">
+        <label class="field name">House Area (in Sq.Ft)</label>
+        <input class="form-control" id="inputdefault" type="number" required>
+    </div>
+    
+    <div class="form-group">
+        <label class="field name">Total Rooms</label>
+        <input class="form-control" id="inputdefault" type="number" required>
+    </div>
+    
+    <div class="form-group">
+        <label class="field name">House Framing</label>
+        <select class="form-control" id="sel1" required>
+            <option value="steel">Steal</option>
+            <option value="wood">Wood</option>
+            <option value="other">Other</option>
+        </select>
+        </div>
+    
+    <div class="form-group">
+        <label class="field name">House Style</label>
+        <select class="form-control" id="sel2" required>
+            <option value="One story">One Story</option>
+            <option value="Two story">Two Story</option>
+            <option value="Three story">Three Story</option>
+            <option value="Other story">Other Story</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="sel3">Roofing Style</label>
+        <select class="form-control" id="sel3" required>
+            <option value="Metal">Metal Roofing</option>
+            <option value="Cedar">Cedar Shingles</option>
+            <option value="Asphalt">Asphalt Shingles</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+    
+    </div>
+    </form>
+    <br>
+    <div class="footer">
+        <button class="button" (click)="prev()" >Back</button>
+        <button class="button" style="float: right;" (click)="next()" type="submit">Continue</button>
+    </div>
+</div>
+  

@@ -14,7 +14,7 @@ export class CustomerConsentComponent implements OnInit {
   }
   prev()
   {
-    this.router.navigate(['prev']);
+    this.router.navigate(['get-started']);
   }
   next()
   {
