@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./other-details.component.css']
 })
 export class OtherDetailsComponent implements OnInit {
+
+  selected1: string = "Select an option";
+  selected2: string = "Select an option";
+  selected3: string = "Select an option";
+
+  build_in_appliances = ['Refrigerator', 'Microwave/Oven', 'Solar Geyser', 'Heating/Cooling System'];
+  utilities = ['Borewell', 'Septic Tank', 'Public Water', 'Public Sewer'];
+  garage = ['Attached Garage', 'Detached Garage'];
+  security_system = ['Monitored Alarm', 'Smoke Alarm', 'Intruder Alarm', 'CCTV Cameras', 'Security Guard'];
+  wiring_to_house = ['Cleat Wiring', 'Casing and Capping Wiring', 'Batten Wiring', 'Lead Sheathed Wiring', 'Conduit Wiring'];
 
   constructor(private router:Router) { }
 
