@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class OtherDetailsComponent implements OnInit {
 
-  selected1: string = "Select an option";
+  // selected1: string = "Select an option";
   selected2: string = "Select an option";
   selected3: string = "Select an option";
 

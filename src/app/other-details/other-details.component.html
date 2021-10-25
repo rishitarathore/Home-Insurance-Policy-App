@@ -1,10 +1,8 @@
-<app-progress-bar></app-progress-bar>
+<app-progress-bar [progress]="70"></app-progress-bar>
 <div class="container col-7">
     <h1 class="text-center" >Other Details</h1>
       <hr class="dotted-line"/>
       <form #myForm="ngForm">
-
-        {{myForm.value | json}}
 
         <div class="form-group">
         <p class="text-justify font-weight-bold mb-0">Build-In Appliances</p> 
@@ -13,31 +11,30 @@
         </div>
         
         <p class="text-justify font-weight-bold mb-0 mt-3">Utilities</p> 
-
         <div class="checkbox" *ngFor="let option of utilities">
-            <label class="mb-0"><input type="checkbox"  class="mr-1" ngModel name="utilities" required>{{option}}</label>
+            <label class="mb-0"><input type="checkbox" class="mr-1" ngModel name="utilities" required>{{option}}</label>
         </div>
 
         <label class="text-justify font-weight-bold mb-0 mt-3 pb-1">Garage</label>
         <div>
-            <select class="form-control" id="custom-select"  [(ngModel)]="selected1" name="garage" required >
-                <option disabled selected vlaue="undefined">{{selected1}}</option>
-                <option *ngFor="let option of garage">{{option}}</option>
+            <select class="form-control" id="custom-select"  ngModel name="garage" required>
+                <option value="" disabled selected>Select an option</option>
+                <option *ngFor="let option of garage" value={{option}} placeholder="Select an option">{{option}}</option>
               </select>
         </div>
 
         <label class="text-justify font-weight-bold mb-0 mt-3 pb-1">Security System</label>
         <div>
-            <select name="select" class="form-control" id="custom-select" [(ngModel)]="selected2" name="security_system" required>
-                <option disabled selected vlaue="undefined">{{selected2}}</option>
+            <select name="select" class="form-control" id="custom-select" ngModel name="security_system" required>
+                <option value="" disabled selected>Select an option</option>
                 <option *ngFor="let option of security_system">{{option}}</option>
               </select>
         </div>
 
         <label class="text-justify font-weight-bold mb-0 mt-3 pb-1">Wiring to House</label>
         <div>
-            <select name="select" class="form-control" id="custom-select" [(ngModel)]="selected3" name="wiring_to_house" required>
-                <option disabled selected vlaue="undefined">{{selected3}}</option>
+            <select name="select" class="form-control" id="custom-select" ngModel name="wiring_to_house" required>
+                <option value="" disabled selected>Select an option</option>
                 <option *ngFor="let option of wiring_to_house">{{option}}</option>
               </select>
         </div>

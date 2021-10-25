@@ -10,9 +10,10 @@ const routes: Routes = [
   { path: 'get-started', component:GetStartedComponent },
 
   { path: 'customer-consent', component:CustomerConsentComponent },
+  { path: 'home-structure-details', component:HomeStructureDetailsComponent },
   { path: 'other-details', component:OtherDetailsComponent},
   { path: 'check-out', component:CheckOutComponent},
-  { path: 'home-structure-details', component:HomeStructureDetailsComponent },
+  
 
   { path: '',   redirectTo: '/get-started', pathMatch: 'full' }, 
    // Wildcard route for a 404 page

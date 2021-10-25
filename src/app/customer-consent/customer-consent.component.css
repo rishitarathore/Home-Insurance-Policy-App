@@ -14,3 +14,10 @@ hr{
     background-color: white;
     border-top:2px dotted #ff2f2f;
 }
+
+button[disabled],
+button.disabled {
+    color:white;
+    background: grey;
+    border: 1px solid #CCC;
+}

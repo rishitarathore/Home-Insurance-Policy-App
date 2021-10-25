@@ -33,7 +33,7 @@ h1{
 
 button[disabled],
 button.disabled {
-    color: #999;
-    background: grey;
+    color: white;
+    background: grey !important;
     border: 1px solid #CCC;
 }
