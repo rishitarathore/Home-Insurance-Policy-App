@@ -19,7 +19,7 @@
         <div>
             <select class="form-control" id="custom-select"  ngModel name="garage" required>
                 <option value="" disabled selected>Select an option</option>
-                <option *ngFor="let option of garage" value={{option}} placeholder="Select an option">{{option}}</option>
+                <option *ngFor="let option of garage" value={{option}}>{{option}}</option>
               </select>
         </div>
 
@@ -27,7 +27,7 @@
         <div>
             <select name="select" class="form-control" id="custom-select" ngModel name="security_system" required>
                 <option value="" disabled selected>Select an option</option>
-                <option *ngFor="let option of security_system">{{option}}</option>
+                <option *ngFor="let option of security_system" value={{option}}>{{option}}</option>
               </select>
         </div>
 
@@ -35,7 +35,7 @@
         <div>
             <select name="select" class="form-control" id="custom-select" ngModel name="wiring_to_house" required>
                 <option value="" disabled selected>Select an option</option>
-                <option *ngFor="let option of wiring_to_house">{{option}}</option>
+                <option *ngFor="let option of wiring_to_house" value={{option}}>{{option}}</option>
               </select>
         </div>
     </div>
