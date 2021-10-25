@@ -26,3 +26,14 @@ hr.dotted-line{
     padding-top: 12px;
     margin-top: 7px;
 }
+
+h1{
+    color:#dc143c;
+}
+
+button[disabled],
+button.disabled {
+    color: #999;
+    background: grey;
+    border: 1px solid #CCC;
+}
