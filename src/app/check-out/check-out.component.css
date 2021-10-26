@@ -56,11 +56,3 @@ hr
     background-color: red;
     color:white;
 }
-#data {
-    display: none;
-    background: green;
-    height: 100px;
-    width: 200px;
-    margin: 0 auto;
-    color: white;
-}
