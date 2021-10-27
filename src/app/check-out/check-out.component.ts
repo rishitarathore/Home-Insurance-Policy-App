@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-check-out',
@@ -9,7 +10,7 @@ export class CheckOutComponent implements OnInit {
   public textShow1 =false;
   public textShow2 =false;
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -20,5 +21,11 @@ export class CheckOutComponent implements OnInit {
   no(){
     this.textShow1 = false;
    this.textShow2 = true;
+  }
+
+  next()
+  {
+    this.router.navigate(['payment-sucessful']);
+
   }
 }

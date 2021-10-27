@@ -1,4 +1,4 @@
-<app-progress-bar [progress]="90"></app-progress-bar>
+<app-progress-bar [progress]="90 "></app-progress-bar>
 <div class="container col-7">
     <h1 class="text-center tc">Checkout</h1>
     <hr />
@@ -96,5 +96,5 @@
           </tr> 
     </table>
       </div>
-      <button id="bt6" type="button" class="rounded-pill btn-block">Continue for Payment</button>
+      <button id="bt6" type="button" class="rounded-pill btn-block" (click)="next()">Continue for Payment</button>
 </div>

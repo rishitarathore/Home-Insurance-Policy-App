@@ -5,6 +5,7 @@ import { OtherDetailsComponent } from './other-details/other-details.component';
 import { CheckOutComponent } from './check-out/check-out.component';
 import { GetStartedComponent } from './get-started/get-started.component';
 import { HomeStructureDetailsComponent } from './home-structure-details/home-structure-details.component';
+import { PaymentSuccessfulComponent } from './payment-successful/payment-successful.component';
 
 const routes: Routes = [
   { path: 'get-started', component:GetStartedComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'home-structure-details', component:HomeStructureDetailsComponent },
   { path: 'other-details', component:OtherDetailsComponent},
   { path: 'check-out', component:CheckOutComponent},
+  { path: 'payment-sucessful', component:PaymentSuccessfulComponent},
   
 
   { path: '',   redirectTo: '/get-started', pathMatch: 'full' }, 

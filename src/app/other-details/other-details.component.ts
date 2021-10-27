@@ -9,10 +9,6 @@ import { Router } from '@angular/router';
 })
 export class OtherDetailsComponent implements OnInit {
 
-  // selected1: string = "Select an option";
-  selected2: string = "Select an option";
-  selected3: string = "Select an option";
-
   build_in_appliances = ['Refrigerator', 'Microwave/Oven', 'Solar Geyser', 'Heating/Cooling System'];
   utilities = ['Borewell', 'Septic Tank', 'Public Water', 'Public Sewer'];
   garage = ['Attached Garage', 'Detached Garage'];
