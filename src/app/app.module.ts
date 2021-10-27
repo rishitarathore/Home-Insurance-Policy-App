@@ -10,6 +10,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { CheckOutComponent } from './check-out/check-out.component';
 import { HomeStructureDetailsComponent } from './home-structure-details/home-structure-details.component';
 import { GetStartedComponent } from './get-started/get-started.component';
+import { PaymentSuccessfulComponent } from './payment-successful/payment-successful.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { GetStartedComponent } from './get-started/get-started.component';
     CheckOutComponent,
     HomeStructureDetailsComponent,
     GetStartedComponent,
+    PaymentSuccessfulComponent,
   ],
   imports: [
     BrowserModule,
