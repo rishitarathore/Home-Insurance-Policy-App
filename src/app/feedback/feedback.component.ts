@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -20,6 +21,6 @@ export class FeedbackComponent implements OnInit {
   {
     this.router.navigate(['payment-sucessful']);
    
-    alert("Thanks for the feedback...");
+    Swal.fire("Submitted","Thanks for the feedback...","success");
   }
 }
