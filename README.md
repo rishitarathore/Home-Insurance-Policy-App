@@ -29,3 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Resources
 
 https://medium.com/front-end-weekly/easy-custom-progress-bar-in-angular-cb2670bb2d02
+https://www.itsolutionstuff.com/post/how-to-use-sweetalert2-in-angularexample.html
