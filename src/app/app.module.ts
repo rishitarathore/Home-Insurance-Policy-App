@@ -11,6 +11,7 @@ import { CheckOutComponent } from './check-out/check-out.component';
 import { HomeStructureDetailsComponent } from './home-structure-details/home-structure-details.component';
 import { GetStartedComponent } from './get-started/get-started.component';
 import { PaymentSuccessfulComponent } from './payment-successful/payment-successful.component';
+import { VehicleInsuranceComponent } from './vehicle-insurance/vehicle-insurance.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { PaymentSuccessfulComponent } from './payment-successful/payment-success
     HomeStructureDetailsComponent,
     GetStartedComponent,
     PaymentSuccessfulComponent,
+    VehicleInsuranceComponent,
   ],
   imports: [
     BrowserModule,

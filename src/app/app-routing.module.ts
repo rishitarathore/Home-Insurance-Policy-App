@@ -6,7 +6,7 @@ import { CheckOutComponent } from './check-out/check-out.component';
 import { GetStartedComponent } from './get-started/get-started.component';
 import { HomeStructureDetailsComponent } from './home-structure-details/home-structure-details.component';
 import { PaymentSuccessfulComponent } from './payment-successful/payment-successful.component';
-
+import { VehicleInsuranceComponent } from './vehicle-insurance/vehicle-insurance.component';
 const routes: Routes = [
   { path: 'get-started', component:GetStartedComponent },
 
@@ -15,7 +15,8 @@ const routes: Routes = [
   { path: 'other-details', component:OtherDetailsComponent},
   { path: 'check-out', component:CheckOutComponent},
   { path: 'payment-sucessful', component:PaymentSuccessfulComponent},
-  
+  { path: 'vehicle-insurance', component:VehicleInsuranceComponent},
+
 
   { path: '',   redirectTo: '/get-started', pathMatch: 'full' }, 
    // Wildcard route for a 404 page

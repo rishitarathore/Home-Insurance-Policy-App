@@ -46,10 +46,10 @@
             
             <p style="font-weight: bold;">Do you want add Vehicle Insurance</p>
             <p id="p1" >(get 5% off on premium)</p>
-              <div class="container">
-                <button style="background-color:rgb(55, 182, 55);"  type="button" (click) = "yes()" class="btn btn-primary">Yes</button> 
-                <button type="button" (click) = "no()" class="btn btn-danger">No</button>
-                <p *ngIf="textShow1">You will have 5% off on vehicle Insurance.If you want to proceed for taking vehicle insurance.<a href="#">Click here!</a></p>
+              <div class="col-8">
+                <button  id="yes" type="button" (click) = "yes()" onclick="document.getElementById('no').setAttribute('disabled',true);" class="btn btn-success">Yes</button> 
+                <button type="button" id="no" (click) = "no()" onclick="document.getElementById('yes').setAttribute('disabled',true);" class="btn btn-danger">No</button>
+                <p *ngIf="textShow1">You will have 5% off on vehicle Insurance.If you want to proceed for taking vehicle insurance.<a href="vehicle-insurance">Proceed here!</a></p>
                 <p *ngIf="textShow2">You can proceed with your Home Insurance...</p>
 
               </div>

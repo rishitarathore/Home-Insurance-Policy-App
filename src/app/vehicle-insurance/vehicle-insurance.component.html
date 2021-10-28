@@ -1,0 +1,50 @@
+<div class="container col-7">
+    <h1 class="text-center tc">Vehicle Details</h1>
+    <hr />
+    <form #userform="ngForm">
+    <div class="form-group">
+    <label for="vehicletype">Type of Vehicle</label>
+    <select class="form-control " id="vehicletype"   name="vehicletype">
+        <option  value="none" selected disabled hidden>
+          Select an option
+        </option>
+        <option *ngFor="let vehicle of vehicles" [value]="vehicle">{{vehicle}}</option>
+      </select>
+     <br>
+    <label for="regno">Vehicle's Registration Number</label>
+    <input type="text" class="form-control " id="regno"  placeholder="Registration No." name="regno"  required><br/>
+    <label for="driver-name">Primary driver of the vehicle</label>
+    <input type="text" class="form-control " id="driver-name" name="driver-name"  placeholder="Driver's name"  required ><br/>
+    <label for="parking-area">Parking Area</label>
+    <select class="form-control" id="parking-area" required >
+        <option selected disabled hidden>Select an option</option>
+        <option *ngFor="let parkarea of parkareas" [value]="parkarea">{{parkarea}}</option>
+      </select><br>
+      <label for="radio">Do you want Comprehensive and collision coverage for this vehicle?</label>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="yes" name="radio" class="custom-control-input" required checked>
+        <label class="custom-control-label " for="yes" >Yes</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="no" name="radio" class="custom-control-input" required >
+        <label class="custom-control-label " for="no">No</label>
+      </div><br/>
+      <label for="vehicle-status">Vehicle Status</label>
+      <select class="form-control" id="vehicle-state" required>
+        <option selected disabled hidden>Select an option</option>
+        <option>Owned</option>
+        <option>Leased</option>
+        <option>Financed</option>
+      </select><br>
+      <div class= "row">
+        <div class="col">
+            <button type="button"  class="rounded-pill btn-block" id="bt1"(click)= "next()" >Back</button>
+        </div>
+        <div class="col ">
+            <button type="submit" class="rounded-pill btn-block" id="bt" disabled >Continue</button>
+        </div>
+  </div>
+</div>
+
+</form> 
+

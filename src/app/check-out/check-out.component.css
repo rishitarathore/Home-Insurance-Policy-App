@@ -56,3 +56,8 @@ hr
     background-color: red;
     color:white;
 }
+#no:disabled,#yes:disabled
+{
+    background-color:lightgray;
+    
+}
