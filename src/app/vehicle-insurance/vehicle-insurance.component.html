@@ -1,0 +1,51 @@
+<div class="container col-7">
+    <h1 class="text-center tc">Vehicle Details</h1>
+    <hr />
+    <form #userform="ngForm" (ngSubmit)="next()">
+    <div class="form-group">
+    <label for="vehicletype">Type of Vehicle</label>
+    <select class="form-control " id="vehicletype"   name="vehicletype" ngModel required>
+        <option  value="" selected disabled hidden>
+          Select an option
+        </option>
+        <option *ngFor="let vehicle of vehicles" [value]="vehicle">{{vehicle}}</option>
+      </select>
+     <br>
+    <label for="regno">Vehicle's Registration Number</label>
+    <input type="text" class="form-control " id="regno"  placeholder="Registration No." name="regno"  ngModel required><br/>
+    <label for="driver-name">Primary driver of the vehicle</label>
+    <input type="text" class="form-control " id="driver-name" name="driver-name"  placeholder="Driver's name"  ngModel required ><br/>
+    <label for="parking-area">Parking Area</label>
+    <select class="form-control" id="parking-area" name="parking-area" ngModel required >
+        <option value="" selected disabled hidden>
+            Select an option
+        </option>
+        <option *ngFor="let parkarea of parkareas" [value]="parkarea">{{parkarea}}</option>
+      </select><br>
+      <label for="radio">Do you want Comprehensive and collision coverage for this vehicle?</label>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="yes" name="radio" class="custom-control-input">
+        <label class="custom-control-label " for="yes" >Yes</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="no" name="radio" class="custom-control-input"  >
+        <label class="custom-control-label " for="no">No</label>
+      </div><br/>
+      <label for="vehicle-status">Vehicle Status</label>
+      <select class="form-control" id="vehicle-state" name="vehicle-state">
+        <option value="" selected disabled hidden>
+            Select an option
+        </option>
+        <option *ngFor="let option of vehicletypes" [value]="option">{{option}}</option>
+      </select><br>
+      <div class= "row">
+        <div class="col">
+            <button type="button"  class="rounded-pill btn-block" id="bt1"(click)= "next()" >Back</button>
+        </div>
+        <div class="col ">
+            <button type="submit" class="rounded-pill btn-block" id="bt" [disabled]="userform.invalid" >Continue</button>
+        </div>
+  </div>
+</div>
+
+</form> 

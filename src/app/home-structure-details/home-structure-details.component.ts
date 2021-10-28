@@ -13,7 +13,7 @@ export class HomeStructureDetailsComponent implements OnInit {
   }
   prev()
   {
-    this.router.navigate(['customer-consent']);
+    this.router.navigate(['customer-details']);
   }
   
   next()
