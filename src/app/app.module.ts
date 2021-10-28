@@ -12,6 +12,8 @@ import { HomeStructureDetailsComponent } from './home-structure-details/home-str
 import { GetStartedComponent } from './get-started/get-started.component';
 import { PaymentSuccessfulComponent } from './payment-successful/payment-successful.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { VehicleInsuranceComponent } from './vehicle-insurance/vehicle-insurance.component';
+import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { FeedbackComponent } from './feedback/feedback.component';
     GetStartedComponent,
     PaymentSuccessfulComponent,
     FeedbackComponent,
+    VehicleInsuranceComponent,
+    CustomerDetailsComponent,
   ],
   imports: [
     BrowserModule,
