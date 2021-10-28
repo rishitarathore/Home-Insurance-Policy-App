@@ -11,6 +11,7 @@ import { CheckOutComponent } from './check-out/check-out.component';
 import { HomeStructureDetailsComponent } from './home-structure-details/home-structure-details.component';
 import { GetStartedComponent } from './get-started/get-started.component';
 import { PaymentSuccessfulComponent } from './payment-successful/payment-successful.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +23,14 @@ import { PaymentSuccessfulComponent } from './payment-successful/payment-success
     HomeStructureDetailsComponent,
     GetStartedComponent,
     PaymentSuccessfulComponent,
+    FeedbackComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

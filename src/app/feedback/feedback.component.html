@@ -1,0 +1,36 @@
+<div class="container col-7">
+  <h1 class="text-center" >Feedback Form</h1>
+  <hr >
+  <form #feedbackForm="ngForm">
+
+    <!-- {{ feedbackForm.value | json }} -->
+    <div class="form-group">
+    Please help us to serve you better by taking a couple of minutes.<br><br>
+
+      <p class="text-justify font-weight-bold mb-0">How satisfied were you with our Product/service?</p> 
+      <div class="checkbox" *ngFor="let option of rating">
+          <label class="mb-0"><input type="radio" class="mr-1" ngModel name="rating" value={{option}} required>{{option}}</label>
+      </div>
+
+      <br>
+      <p style="font-weight: bold;" >If you have specific feedback, please write to us...</p>
+      
+     
+        <textarea class="form-control" id="txt-area" rows="4" placeholder="Additional comments"></textarea>
+      <br>
+
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" name="name" placeholder="Your name"  ngModel required>
+          </div>
+          <div class="col">
+            <input type="email" class="form-control" placeholder="Your Email" name="email" ngModel required>
+          </div>
+        </div>
+
+      <br>
+
+      <div class= "row">
+        <div class="col center">
+            <button type="button"  class="rounded-pill btn-block"  (click)="prev()" [disabled]="feedbackForm.form.invalid">Submit</button>
+          
