@@ -37,3 +37,15 @@ button{
     color:white;background-color:red;
 
 }
+.button {
+    background-color:red;
+    color:white;
+    padding: 10px 10px;
+    text-align: center;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 165px;
+    
+}
+

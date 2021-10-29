@@ -14,6 +14,8 @@ import { PaymentSuccessfulComponent } from './payment-successful/payment-success
 import { FeedbackComponent } from './feedback/feedback.component';
 import { VehicleInsuranceComponent } from './vehicle-insurance/vehicle-insurance.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
+import { CustomerDetailsTwoComponent } from './customer-details-two/customer-details-two.component';
+import { HomeDetailsComponent } from './home-details/home-details.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { CustomerDetailsComponent } from './customer-details/customer-details.co
     FeedbackComponent,
     VehicleInsuranceComponent,
     CustomerDetailsComponent,
+    CustomerDetailsTwoComponent,
+    HomeDetailsComponent,
   ],
   imports: [
     BrowserModule,

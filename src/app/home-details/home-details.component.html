@@ -1,0 +1,94 @@
+
+<div class="container col-7">
+
+    <form #homeForm="ngForm">
+             
+        <div class="content">
+            <div class="bar">
+    
+                <div class="progress" aria-valuemin="0" aria-valuemax="100" style ="width:50%">50%</div>
+            
+            </div>
+            <div class="dotline">
+            
+                <h1>Home Details</h1>
+            
+            </div>
+        
+        <br>
+        
+        
+        <div class="form-group">
+            <label class="field name">Property Holder Name</label>
+            <input class="form-control" type="text" 
+            [(ngModel)]="userModel.name" 
+            #name="ngModel" name="name" required>
+            
+        </div>
+    
+        <div class="form-group">
+            <label class="field name">Complete Address</label>
+            <textarea class="form-control" rows="3" 
+            [(ngModel)]="userModel.address" #address="ngModel"
+            type="text" name="address" required></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label class="field name">House Area (in Sq.Ft)</label>
+            <input class="form-control" 
+            [(ngModel)]="userModel.area" name="area" #area="ngModel"
+            type="number" required>
+        </div>
+        
+        <div class="form-group">
+            <label class="field name">Value of Square Feet</label>
+            <input class="form-control"
+            [(ngModel)]="userModel.value" #value="ngModel"
+            type="number" required>
+        </div>
+        
+        <div class="form-group">
+            <label class="field name">Near To</label>
+            <select class="form-control" 
+            [(ngModel)]="userModel.near" #near="ngModel"
+            required>
+                <option value="city">City</option>
+                <option value="town">Town</option>
+                <option value="village">Village</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label class="field name">House Built Year</label>
+            <input class="form-control"
+            type="number" required>
+        </div>
+    
+        <div class="form-group">
+            <label class="field name">Total Rooms</label>
+            <input class="form-control" id="inputdefault" type="number" required>
+        </div>
+        
+        <div class="form-group">
+            <label class="field name">Property share</label>
+            <select class="form-control"
+            [(ngModel)]="userModel.share" #share="ngModel"
+            required >
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="more">more</option>
+            </select>
+        </div>
+        
+        </div>
+        
+    </form>
+    <br>
+        <div class="footer">
+            <button class="button" (click)="prev()">Back</button>
+            <button style="float: right" id="button" [disabled]="homeForm.form.invalid" 
+            class="button" 
+            (click)="next()" type="submit"> Continue</button>
+        </div>
+</div>

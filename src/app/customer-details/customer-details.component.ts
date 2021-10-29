@@ -14,10 +14,10 @@ export class CustomerDetailsComponent implements OnInit {
   }
   prev()
   {
-    this.router.navigate(['customer-consent']);
+    this.router.navigate(['home-structure-details']);
  
   }
 next(){
-  this.router.navigate(['home-structure-details']);
+  this.router.navigate(['customer-details-two']);
 }
 }

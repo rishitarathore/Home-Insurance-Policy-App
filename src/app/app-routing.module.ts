@@ -9,7 +9,8 @@ import { PaymentSuccessfulComponent } from './payment-successful/payment-success
 import { FeedbackComponent } from './feedback/feedback.component';
 import { VehicleInsuranceComponent } from './vehicle-insurance/vehicle-insurance.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
-
+import { CustomerDetailsTwoComponent } from './customer-details-two/customer-details-two.component';
+import { HomeDetailsComponent } from './home-details/home-details.component';
 const routes: Routes = [
   { path: 'get-started', component:GetStartedComponent },
 
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'feedback', component:FeedbackComponent},
   { path: 'vehicle-insurance', component:VehicleInsuranceComponent},
   { path: 'customer-details', component:CustomerDetailsComponent},
-
+  { path: 'customer-details-two', component:CustomerDetailsTwoComponent},
+  { path: 'home-details', component:HomeDetailsComponent },
 
   { path: '',   redirectTo: '/get-started', pathMatch: 'full' }, 
    // Wildcard route for a 404 page
