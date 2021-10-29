@@ -16,18 +16,22 @@
     
 }
 
+
+button[disabled],button.disabled{
+    background-color: gray;
+}
+
 .main
 {
-    align-content: center;
+    align-content:center;
     justify-content: center ;
     display: grid ;
     padding: 4px;
-
 }
 
 .progress {
     color:white;
-    background-color: green;
+    background-color: #03aa6c;
     height: 20px;
     font-size: 10px;
     text-align: center;

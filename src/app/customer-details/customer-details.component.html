@@ -2,57 +2,64 @@
 <div class="container col-7">
     <h1 style="color:red"> Customer Details </h1>
     <hr/>
-    <form action="index.html">
-        
-        <label for="fname">First name:</label><br>
+    <form #myform="ngForm" (ngSubmit)="next()">
+        <div class="form-group">
+        <label for="fname">First name:</label>
 
-        <input  type="text" id="fname" name="fname"><br>
+        <input  class="form-control" type="text" id="fname" name="fname"></div>
+        <div class="form-group">
 
-        <label for="lname">Last name:</label><br>
+        <label for="lname">Last name:</label>
 
-        <input type="text" id="lname" name="lname"><br><br>
+        <input class="form-control" type="text" id="lname" name="lname"></div>
+        <div class="form-group">
+      
+        <label for="mail">Mailing Address:</label>
 
-        <label for="mail">Mailing Address:</label><br>
+        <input class="form-control" type="text" id="mail" name="mail"><br>
 
-        <input type="text" id="mail" name="mail"><br><br>
-
-        <input type="text" id="mail" name="mail"><br><br>
+        <input class="form-control" type="text" id="mail" name="mail"></div>
 
        
+        <div class="form-group">
 
-        <label for="city">City:</label><br>
+        <label for="city">City:</label>
 
-        <input type="text" id="city" name="city"><br>
+        <input class="form-control"  type="text" id="city" name="city"></div>
+        <div class="form-group">
 
-        <label for="state">State:</label><br>
+        <label for="state">State:</label>
 
-        <input type="text" id="state" name="state"><br>
+        <input class="form-control" type="text" id="state" name="state"></div>
+        <div class="form-group">
 
-        <label for="zip">Zip-Code:</label><br>
+        <label for="zip">Zip-Code:</label>
 
-        <input type="text" id="zip" name="zip"><br><br>
+        <input class="form-control" type="text" id="zip" name="zip"></div>
+        <div class="form-group">
 
-        <label for="dob">Date of Birth:</label><br>
+        <label for="dob">Date of Birth:</label>
 
-        <input type="date" id="dob" name="dob"><br><br>
+        <input class="form-control" type="date" id="dob" name="dob"></div>
+        <div class="form-group">
 
-        <label for="email">Email ID:</label><br>
+        <label for="email">Email ID:</label>
 
-        <input type="email" id="email" name="email"><br><br>
+        <input class="form-control" type="email" id="email" name="email"></div>
 
        
 
    
 
-        </form>
+        
 
 
-    <div class="button">
-
-        <button mat-button color="warn" (click)="prev()">BACK</button>
-
-        <button mat-button color="warn" (click)="next()">CONTINUE</button>
-
-    </div>
+        <div class="footer">
+            <button class="button" (click)="prev()">Back</button>
+            <button style="float: right" id="button" 
+            class="button" 
+            (click)="next()" type="submit"> Continue</button>
+        </div>
+</form>
 </div>
 

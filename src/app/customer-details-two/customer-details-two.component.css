@@ -1,9 +1,51 @@
-.dotline{
-    color: red;
-    text-align: center; 
-    border-bottom: dotted;
+.main
+
+{
+
+    align-content: center;
+
+    justify-content: center ;
+
+    display: grid ;
+
+    padding: 4px;
+
+}
+label,input{
+    padding: 4px;
+}
+h1{
+    text-align: center;
+}
+.progress {
+
+    color:white;
+
+    background-color: green;
+
+    height: 20px;
+
+    font-size: 10px;
+
+    text-align: center;
+
+    padding: 4px;
+
+
+
 }
 
+
+
+.bar{
+
+    margin-top: 30px;
+
+    background-color: whitesmoke;
+
+    height: 20px;
+
+}
 .button {
     background-color:red;
     color:white;
@@ -16,27 +58,3 @@
     
 }
 
-.main
-{
-    align-content: center;
-    justify-content: center ;
-    display: grid ;
-    padding: 4px;
-
-}
-
-.progress {
-    color:white;
-    background-color: green;
-    height: 20px;
-    font-size: 10px;
-    text-align: center;
-    padding: 4px;
-
-}
-
-.bar{
-    margin-top: 30px;
-    background-color: whitesmoke;
-    height: 20px;
-}

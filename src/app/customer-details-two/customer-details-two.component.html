@@ -1,0 +1,49 @@
+<app-progress-bar [progress]=40></app-progress-bar>
+
+<div class="container col-7">
+    <h1 style="color:red"> Customer Details </h1>
+    <hr/>
+    <form #myform="ngForm" (ngSubmit)="next()">
+            <div class="form-group">
+            <label for="Occupation">Occupation:</label>
+            <input  class="form-control" type="text" id="Occupation" name="Occupation"></div>
+            <div class="form-group">
+            <label for="Location">Location:</label>
+            <input class="form-control" type="text" id="Location" name="Location"></div>   
+            <div class="form-group">
+
+            <label for="Street">Street:</label>
+            <input class="form-control" type="text" id="Street" name="Street"></div>
+            <div class="form-group">
+
+            <label for="Maritalstatus">Maritalstatus:</label>
+            <input class="form-control" type="text" id="Maritalstatus" name="Maritalstatus"></div>
+            <div class="form-group">
+
+            <label for="Gender">Gender:</label>
+            <input class="form-control" type="text" id="Gender" name="Gender"></div>
+            
+            <div class="form-group">
+
+            <label for="age">Age:</label>
+            <input class="form-control" type="text" id="age" name="age"></div>
+            <div class="form-group">
+
+            <label for="Phone">Phone:</label>
+            <input class="form-control" type="Phone" id="Phone" name="Phone"></div>
+            <div class="form-group">
+
+            <label for="Alternate number">Alternate number:</label>
+            <input class="form-control" type="Alternate number" id="Alternate number" name="Alternate number"></div>
+            
+        
+            </form>
+    
+            <div class="footer">
+                <button class="button" (click)="prev()">Back</button>
+                <button style="float: right" id="button" 
+                class="button" 
+                (click)="next()" type="submit"> Continue</button>
+            </div>
+        
+    </div>
