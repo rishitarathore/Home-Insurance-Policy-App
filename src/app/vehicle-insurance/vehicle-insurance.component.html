@@ -22,15 +22,13 @@
         </option>
         <option *ngFor="let parkarea of parkareas" [value]="parkarea">{{parkarea}}</option>
       </select><br>
-      <label for="radio">Do you want Comprehensive and collision coverage for this vehicle?</label>
-      <div class="custom-control custom-radio">
-        <input type="radio" id="yes" name="radio" class="custom-control-input">
-        <label class="custom-control-label " for="yes" >Yes</label>
-      </div>
-      <div class="custom-control custom-radio">
-        <input type="radio" id="no" name="radio" class="custom-control-input"  >
-        <label class="custom-control-label " for="no">No</label>
-      </div><br/>
+      <label for="coverage">Do you want Comprehensive and collision coverage for this vehicle?</label>
+      <select class="form-control" id="coverage" name="coverage" ngModel required >
+        <option value="" selected disabled hidden>
+            Select an option
+        </option>
+        <option *ngFor="let value of values" [value]="value">{{value}}</option>
+      </select><br>
       <label for="vehicle-status">Vehicle Status</label>
       <select class="form-control" id="vehicle-state" name="vehicle-state">
         <option value="" selected disabled hidden>

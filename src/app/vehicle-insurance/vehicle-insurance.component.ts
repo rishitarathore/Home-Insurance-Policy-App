@@ -12,6 +12,7 @@ export class VehicleInsuranceComponent implements OnInit {
   vehicles:string[]=['Car','Bus','Tractor','Bike','Other'];
   parkareas:string[]=['A private garage','The driveway','A quiet residential street','Other'];
   vehicletypes:string[]=['Owned','Leased','Financed'];
+  values:string[]=['Yes','No']
   ngOnInit(): void {
   }
   next()
