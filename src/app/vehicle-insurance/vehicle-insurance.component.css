@@ -18,3 +18,11 @@ button
     background-color: red;
     color: white;
 }
+label{
+    font-weight: bold;
+}
+.error
+{
+    color:red;
+    font-size: small;
+}

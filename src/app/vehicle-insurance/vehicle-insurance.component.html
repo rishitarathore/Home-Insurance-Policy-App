@@ -12,9 +12,16 @@
       </select>
      <br>
     <label for="regno">Vehicle's Registration Number</label>
-    <input type="text" class="form-control " id="regno"  placeholder="Registration No." name="regno"  ngModel required><br/>
-    <label for="driver-name">Primary driver of the vehicle</label>
-    <input type="text" class="form-control " id="driver-name" name="driver-name"  placeholder="Driver's name"  ngModel required ><br/>
+    <input type="text" class="form-control " id="regno"  pattern="[a-zA-Z][a-zA-Z][0-9][0-9][a-zA-Z][a-zA-Z][0-9][0-9][0-9][0-9]" placeholder="Registration No." name="regno"  ngModel required #regno="ngModel">
+    <div class="error" *ngIf="regno.errors?.pattern">Registration Number must contain a combination of alphabets and numbers and length should be 10.</div>
+    <br/>
+    <label for="name">Primary driver of the vehicle</label>
+    <input type="text" class="form-control " id="name" maxlength=25 minlength=5 pattern="[A-Za-z]+" name="name"  placeholder="Driver's name"  ngModel required #name="ngModel" >
+    <div class="error" *ngIf="name.errors?.maxlength">Maximum length is 25 only. </div>
+    <div class="error" *ngIf="name.errors?.minlength">Minimum length should be 5.</div>
+    <div class="error" *ngIf="name.errors?.pattern">Name contains no numbers.</div>
+
+    <br/>
     <label for="parking-area">Parking Area</label>
     <select class="form-control" id="parking-area" name="parking-area" ngModel required >
         <option value="" selected disabled hidden>
@@ -30,7 +37,7 @@
         <option *ngFor="let value of values" [value]="value">{{value}}</option>
       </select><br>
       <label for="vehicle-status">Vehicle Status</label>
-      <select class="form-control" id="vehicle-state" name="vehicle-state">
+      <select class="form-control" id="vehicle-state" name="vehicle-state" ngModel required>
         <option value="" selected disabled hidden>
             Select an option
         </option>
@@ -38,7 +45,7 @@
       </select><br>
       <div class= "row">
         <div class="col">
-            <button type="button"  class="rounded-pill btn-block" id="bt1"(click)= "next()" >Back</button>
+            <button type="button"  class="rounded-pill btn-block" id="bt1"(click)= "prev()" >Back</button>
         </div>
         <div class="col ">
             <button type="submit" class="rounded-pill btn-block" id="bt" [disabled]="userform.invalid" >Continue</button>
