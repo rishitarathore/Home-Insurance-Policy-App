@@ -7,8 +7,7 @@
         <p style="font-weight: bold;">1. $40(Monthly Plan)</p>
         <img style="float: left;" src="assets\images\gettyimages-183881669-612x612.jpg" alt="image">
         <p >Home <br>
-        Insurance</p>
-        </div>
+        Insurance</p></div>
         <div class="vr"></div>
         <div class='col' id="col2">
         <p style="font-size: 25px;" class="text-center">Summary</p>
@@ -38,9 +37,50 @@
             </tr>
         </table>
         </div>
+    
     </div>
     <hr/>
-    <div>
+    <div *ngIf="vehicledetails">
+    <div class="row"  >
+      <div class="col" id="col1">
+      <p style="font-weight: bold;">2. $30(Monthly Plan)</p>
+
+      <img style="float: left;" src="assets\images\car-image.png" alt="image">
+      <p >Vehicle <br>
+        Insurance</p></div>
+        <div class="vr"></div>
+        <div class='col' id="col2">
+        <p style="font-size: 25px;" class="text-center">Summary</p>
+        <hr/>
+        <table class="table table-borderless">
+            <tr class="tr2">
+            <td>Policy</td>
+            <td>x1</td>
+            <td>$30</td>
+            </tr>
+            <tr class="tr2">
+            <td>1<sup>st</sup> Premium</td>
+            <td>x1</td>
+            <td>$4</td>
+            </tr>
+            <tr class="tr2" >
+            <td>Tax</td>
+            <td>x1</td>
+            <td>$3</td>
+            </tr>
+        </table>
+        <hr/>
+        <table class="table table-borderless">
+            <tr class="tr2">
+                <td>Total</td>
+                <td>$37</td>
+            </tr>
+        </table>
+
+    </div>
+  </div>
+<hr/>
+</div>
     <div class=" row">
         <div class="container col-8">
             
@@ -49,8 +89,9 @@
               <div class="col-8">
                 <button  id="yes" type="button" (click) = "yes()" onclick="document.getElementById('no').setAttribute('disabled',true);" class="btn btn-success">Yes</button> 
                 <button type="button" id="no" (click) = "no()" onclick="document.getElementById('yes').setAttribute('disabled',true);" class="btn btn-danger">No</button>
+                <div *ngIf="!vehicledetails">
                 <p *ngIf="textShow1">You will have 5% off on vehicle Insurance.If you want to proceed for taking vehicle insurance.<a href="vehicle-insurance">Proceed here!</a></p>
-                <p *ngIf="textShow2">You can proceed with your Home Insurance...</p>
+                <p *ngIf="textShow2">You can proceed with your Home Insurance...</p></div>
 
               </div>
               
