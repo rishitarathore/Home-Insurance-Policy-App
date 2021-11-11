@@ -17,7 +17,7 @@ img{
 }
 .text-center.tc{
     color: #dc143c;  
-    padding-bottom: 25px;
+    padding-bottom: 10px;
 }
 #p1
 {
@@ -39,19 +39,13 @@ hr
 {
     text-shadow: -1px -1px 0, 1px -1px 0 rgb(152, 243, 14), -1px 1px 0 greenyellow, 2px 2px 0 darkslategray;
 }
-.container.col-md-7
-{
-    padding-top:20px;
-}
+
 .tr2
 {
     font-weight: bold;
 }
 
-.container.col4
-{
-    background-color: #ECECEC;
-}
+
 #bt6{
     background-color: red;
     color:white;
