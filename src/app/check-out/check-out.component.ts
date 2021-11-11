@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router,NavigationExtras } from '@angular/router';
 import { VehicleInsuranceComponent } from '../vehicle-insurance/vehicle-insurance.component';
 import { ActivatedRoute } from '@angular/router';
 import { FormGroup } from '@angular/forms';
@@ -34,7 +34,12 @@ export class CheckOutComponent implements OnInit {
 
   next()
   {
-    this.router.navigate(['payment-sucessful']);
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+          "vehicledetails": this.vehicledetails,
+      }
+    };
+    this.router.navigate(['payment'],navigationExtras);
    
   }
   
