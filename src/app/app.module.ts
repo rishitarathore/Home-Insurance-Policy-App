@@ -38,8 +38,7 @@ import { PaymentComponent } from './payment/payment.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
-    
+    ReactiveFormsModule,    
   ],
   providers: [],
   bootstrap: [AppComponent]
