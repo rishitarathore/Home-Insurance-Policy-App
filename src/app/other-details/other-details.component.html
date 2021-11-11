@@ -15,19 +15,16 @@
             <label class="mb-0"><input type="checkbox" class="mr-1" ngModel name="utilities" required>{{option}}</label>
         </div>
 
+        <p class="text-justify font-weight-bold mb-0 mt-3">Security System</p> 
+        <div class="checkbox" *ngFor="let option of security_system">
+            <label class="mb-0"><input type="checkbox" class="mr-1" ngModel name="system_security" required>{{option}}</label>
+        </div>
+
         <label class="text-justify font-weight-bold mb-0 mt-3 pb-1">Garage</label>
         <div>
             <select class="form-control" id="custom-select"  ngModel name="garage" required>
                 <option value="" disabled selected>Select an option</option>
                 <option *ngFor="let option of garage" value={{option}}>{{option}}</option>
-              </select>
-        </div>
-
-        <label class="text-justify font-weight-bold mb-0 mt-3 pb-1">Security System</label>
-        <div>
-            <select name="select" class="form-control" id="custom-select" ngModel name="security_system" required>
-                <option value="" disabled selected>Select an option</option>
-                <option *ngFor="let option of security_system" value={{option}}>{{option}}</option>
               </select>
         </div>
 
