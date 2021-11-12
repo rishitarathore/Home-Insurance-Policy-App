@@ -14,7 +14,7 @@
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 25px;
-    width: 165px;
+    width: 165px;   
 }
 .main
 {
@@ -25,14 +25,20 @@
 }
 .progress {
     color:white;
-    background-color: green;
+    background-color:#03aa6c;
     height: 20px;
     font-size: 10px;
-    text-align: center;
+    text-align: right;
     padding: 4px;
 }
 .bar{
     margin-top: 30px;
     background-color: whitesmoke;
     height: 20px;
+}
+button[disabled],
+button.disabled {
+    color: white;
+    background: grey !important;
+    border: 1px solid #CCC;
 }
