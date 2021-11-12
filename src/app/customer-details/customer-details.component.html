@@ -9,34 +9,37 @@
     </div>
        <div>
         <form #myform="ngForm">
-            <label for="fname">First name:</label><br>
-            <input ngModel required  type="text" id="fname" name="fname"><br>
+            <div class="form-group">
+                <label class="field name" for="name">First Name</label>
+                
+                <input class="form-control" minlength="3" maxlength="50" type="text" 
+                name="name" placeholder="Enter Name minimum 3 characters" ngModel required #name="ngModel" pattern="[A-Z a-z]+">
+                <div *ngIf="name.errors?.pattern" class="error">
+                    Name should be in Text
+                </div>
+                <div *ngIf="name.errors?.minlength" class="error">
+                    Name should be minimum 3 characters
+                </div>  
+            </div>
             <label for="lname">Last name:</label><br>
             <input ngModel required  type="text" id="lname" name="lname"><br><br>
             <label for="mail">Mailing Address:</label><br>
-            <input ngModel required type="text" id="mail" name="mail"><br><br>
             <input ngModel required type="text" id="mail" name="mail"><br><br>
             <label for="city">City:</label><br>
             <input ngModel required type="text" id="city" name="city"><br>
             <label for="state">State:</label><br>
             <input ngModel required type="text" id="state" name="state"><br>
             <label for="zip">Zip-Code:</label><br>
+            
             <input ngModel required type="text" id="zip" name="zip"><br><br>
+            <label for="Location">Location:</label><br>
+            <input ngModel required type="text" id="Location" name="Location"><br><br>
+            <label for="Street">Street:</label><br>
+            <input ngModel required  type="text" id="Street" name="Street"><br><br>
             <label for="Email-ID">Email-ID:</label><br>
             <input ngModel required type="text" id="Email-ID" name="Email-ID"><br><br>
             </form>
-            <label for="DOB">DOB:</label>
-
-            <br> <input type="date" [(ngModel)]="age" (ngModelChange)="ageCalculator()" /><br>
-
-            <br><label>Age:</label>
-
-
-
-            <br><input type="number" disabled placeholder="{{ showAge }}" />
-
-            <br/><br/>
-         
+           
         
        
         <div>
