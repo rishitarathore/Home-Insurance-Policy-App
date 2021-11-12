@@ -3,7 +3,9 @@
     text-align: center; 
     border-bottom: dotted;
 }
-
+.content{
+    width: 400px;
+}
 .button {
     background-color:red;
     color:white;
@@ -12,15 +14,8 @@
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 25px;
-    width: 165px;
-    
+    width: 165px;    
 }
-
-
-button[disabled],button.disabled{
-    background-color: gray;
-}
-
 .main
 {
     align-content:center;
@@ -28,7 +23,6 @@ button[disabled],button.disabled{
     display: grid ;
     padding: 4px;
 }
-
 .progress {
     color:white;
     background-color: #03aa6c;
@@ -36,9 +30,7 @@ button[disabled],button.disabled{
     font-size: 10px;
     text-align: center;
     padding: 4px;
-
 }
-
 .bar{
     margin-top: 30px;
     background-color: whitesmoke;
