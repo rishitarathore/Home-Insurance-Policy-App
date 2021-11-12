@@ -1,49 +1,54 @@
-<app-progress-bar [progress]=40></app-progress-bar>
-
-<div class="container col-7">
-    <h1 style="color:red"> Customer Details </h1>
-    <hr/>
-    <form #myform="ngForm" (ngSubmit)="next()">
-            <div class="form-group">
+<div class="main">
+    <div class="bar">
+        <div class="progress"aria-valuemax="0" aria-valuemax="100" style="width:30%">30%</div>
+    <div>
+    <h1 style="color:red"> Customer Information</h1>
+    <p style="color: red;">................................................................................................</p>
+    </div>
+       <div>
+        <form #myform="ngForm">
             <label for="Occupation">Occupation:</label>
-            <input  class="form-control" type="text" id="Occupation" name="Occupation"></div>
-            <div class="form-group">
-            <label for="Location">Location:</label>
-            <input class="form-control" type="text" id="Location" name="Location"></div>   
-            <div class="form-group">
-
-            <label for="Street">Street:</label>
-            <input class="form-control" type="text" id="Street" name="Street"></div>
-            <div class="form-group">
-
-            <label for="Maritalstatus">Maritalstatus:</label>
-            <input class="form-control" type="text" id="Maritalstatus" name="Maritalstatus"></div>
-            <div class="form-group">
-
-            <label for="Gender">Gender:</label>
-            <input class="form-control" type="text" id="Gender" name="Gender"></div>
-            
-            <div class="form-group">
-
-            <label for="age">Age:</label>
-            <input class="form-control" type="text" id="age" name="age"></div>
-            <div class="form-group">
-
-            <label for="Phone">Phone:</label>
-            <input class="form-control" type="Phone" id="Phone" name="Phone"></div>
-            <div class="form-group">
-
-            <label for="Alternate number">Alternate number:</label>
-            <input class="form-control" type="Alternate number" id="Alternate number" name="Alternate number"></div>
-            
-        
-            </form>
     
-            <div class="footer">
-                <button class="button" (click)="prev()">Back</button>
-                <button style="float: right" id="button" 
-                class="button" 
-                (click)="next()" type="submit"> Continue</button>
-            </div>
+    <select ngModel name="occupation" required id="Occupation">
+      <option value="Doctor">Doctor</option>
+      <option value="Engineer">Engineer</option>
+      <option value="Artist">Artist</option>
+      <option value="Social worker">Social worker</option>
+      <option value="Bussiness analyst">Bussiness analyst</option>
+      <option value="Free lancer">Free lancer</option>
+    </select><br><br>
+    <label for="Location">Location:</label><br>
+            <input ngModel required type="text" id="Location" name="Location"><br><br>
+            <label for="Street">Street:</label><br>
+            <input ngModel required  type="text" id="Street" name="Street"><br><br>
+            <label for="Marital status">Marital status:</label>
+            <select ngModel name="Marital status" required id="Marital status">
+            <option value="Married">Married</option>
+            <option value="Unmarried">Unmarried</option>
+     
+            </select><br><br>  
+            <label for="Gender">Gender:</label><br>
+            <input type="checkbox" id="Male" name="Male" value="boy">
+    <label for="Male"> Male</label><br>
+    <input  type="checkbox" id="Female" name="Female" value="girl">
+    <label for="Female"> Female</label><br>
+    <input  type="checkbox" id="Others" name="Others" value="Others">
+    <label for="Others"> Others</label><br><br>
+     
+    <label for="Phone">Phone:</label><br>
+    <input ngModel required  type="Phone" id="Phone" name="Phone"><br><br>
+    <label for="Alternate number">Alternate number:</label><br>
+    <input ngModel required type="Alternate number" id="Alternate number" name="Alternate number"><br><br>
+    
+    
+    
+            
+         
+            </form>
+        </div>
+        <div >
+            <button class="button" color="warn" (click)="prev()">BACK</button>
+            <button class="button" color="warn" Type="submit" [disabled]="myform.form.invalid">CONTINUE </button>
+        </div>
         
     </div>

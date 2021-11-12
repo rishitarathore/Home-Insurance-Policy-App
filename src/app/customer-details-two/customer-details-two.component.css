@@ -54,7 +54,17 @@ h1{
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 25px;
-    width: 165px;
-    
+    width: 165px;   
 }
 
+button[disabled],
+
+button.disabled {
+
+    color: white;
+
+    background: grey !important;
+
+    border: 1px solid #CCC;
+
+}
