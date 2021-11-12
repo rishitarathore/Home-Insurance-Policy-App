@@ -10,6 +10,8 @@ import { Customer } from '../customer';
 export class CustomerDetailsComponent implements OnInit {
 
   constructor(private router:Router) { }
+  age: any;
+  showAge: any;
 
   customerModel = new Customer('','','');
 
@@ -27,4 +29,12 @@ next(){
   this.router.navigate(['customer-details-two']);
   console.log(this.customerModel);
 }
+ageCalculator()
+{
+  if(this.age){
+    const convertAge = new Date(this.age);
+    const timeDiff = Math.abs(Date.now() - convertAge.getTime());
+    this.showAge = Math.floor((timeDiff / (1000 * 3600 * 24))/365);
+  }
+  }
 }

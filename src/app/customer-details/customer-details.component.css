@@ -1,40 +1,64 @@
-hr
-{
-    background-color:white;
-    border:1px dotted red;
-}
 .main
+ 
 {
- align-content: center;
- justify-content: center ;
- display: grid ;
- padding: 4px;
+ 
+    align-content: center;
+ 
+    justify-content: center ;
+ 
+    display: grid ;
+ 
+    padding: 4px;
+ 
 }
-
 label,input{
-padding: 4px;
+    padding: 4px;
 }
-
 h1{
-text-align: center;
+    text-align: center;
+}
+.progress {
+ 
+    color:white;
+ 
+    background-color: green;
+ 
+    height: 20px;
+ 
+    font-size: 10px;
+ 
+    text-align: center;
+ 
+    padding: 4px;
+
 }
 
-.progress {
-color:white;
-background-color: green;
-height: 20px;
-font-size: 10px;
-text-align: center;
-padding: 4px;
-}
 .bar{
-margin-top: 30px;
-background-color: whitesmoke;
-height: 20px;
+ 
+    margin-top: 30px;
+ 
+    background-color: whitesmoke;
+ 
+    height: 20px;
+ 
 }
 button{
-
     color:white;background-color:red;
+}
+
+
+body{
+    font-family: sans-serif, Arial;
+  }
+  button[disabled],
+
+button.disabled {
+
+    color: white;
+
+    background: grey !important;
+
+    border: 1px solid #CCC;
 
 }
 .button {
@@ -45,7 +69,5 @@ button{
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 25px;
-    width: 165px;
-    
+    width: 165px;   
 }
-

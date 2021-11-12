@@ -1,58 +1,47 @@
-<app-progress-bar [progress]=30></app-progress-bar>
-<div class="container col-7">
+<div class="main"> 
+ 
+    <div class="bar">
+     
+    <div class="progress" aria-valuemin="0" aria-valuemax="100" style ="width:30%">30%</div>
+    <div>
     <h1 style="color:red"> Customer Details </h1>
-    <hr/>
-    <form #myform="ngForm" (ngSubmit)="next()">
-        <div class="form-group">
-        <label for="fname">First name:</label>
+    <p style="color: red;">...............................................................................................</p>
+    </div>
+       <div>
+        <form #myform="ngForm">
+            <label for="fname">First name:</label><br>
+            <input ngModel required  type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input ngModel required  type="text" id="lname" name="lname"><br><br>
+            <label for="mail">Mailing Address:</label><br>
+            <input ngModel required type="text" id="mail" name="mail"><br><br>
+            <input ngModel required type="text" id="mail" name="mail"><br><br>
+            <label for="city">City:</label><br>
+            <input ngModel required type="text" id="city" name="city"><br>
+            <label for="state">State:</label><br>
+            <input ngModel required type="text" id="state" name="state"><br>
+            <label for="zip">Zip-Code:</label><br>
+            <input ngModel required type="text" id="zip" name="zip"><br><br>
+            <label for="Email-ID">Email-ID:</label><br>
+            <input ngModel required type="text" id="Email-ID" name="Email-ID"><br><br>
+            </form>
+            <label for="DOB">DOB:</label>
 
-        <input  class="form-control" type="text" id="fname" name="fname" [(ngModel)]="customerModel.fname"></div>
-        <div class="form-group">
+            <br> <input type="date" [(ngModel)]="age" (ngModelChange)="ageCalculator()" /><br>
 
-        <label for="lname">Last name:</label>
+            <br><label>Age:</label>
 
-        <input class="form-control" type="text" id="lname" name="lname" [(ngModel)]="customerModel.lname"></div>
-        <div class="form-group">
-      
-        <label for="mail">Mailing Address:</label>
 
-        <input class="form-control" type="text" id="mail" name="mail"><br>
 
-        <input class="form-control" type="text" id="mail" name="mail"></div>
+            <br><input type="number" disabled placeholder="{{ showAge }}" />
 
+            <br/><br/>
+         
+        
        
-        <div class="form-group">
-
-        <label for="city">City:</label>
-
-        <input class="form-control"  type="text" id="city" name="city"></div>
-        <div class="form-group">
-
-        <label for="state">State:</label>
-
-        <input class="form-control" type="text" id="state" name="state"></div>
-        <div class="form-group">
-
-        <label for="zip">Zip-Code:</label>
-
-        <input class="form-control" type="text" id="zip" name="zip"></div>
-        <div class="form-group">
-
-        <label for="dob">Date of Birth:</label>
-
-        <input class="form-control" type="date" id="dob" name="dob"></div>
-        <div class="form-group">
-
-        <label for="email">Email ID:</label>
-
-        <input class="form-control" type="email" id="email" name="email" [(ngModel)]="customerModel.email"></div>
-
-        <div class="footer">
-            <button class="button" (click)="prev()">Back</button>
-            <button style="float: right" id="button" 
-            class="button" 
-            (click)="next()" type="submit"> Continue</button>
+        <div>
+            <button  class="button" color="warn">BACK</button>
+            <button class="button" color="warn" (click)="next()" Type="submit" [disabled]="myform.form.invalid">CONTINUE </button>
         </div>
-</form>
-</div>
-
+        
+        
