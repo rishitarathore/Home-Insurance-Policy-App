@@ -23,7 +23,10 @@ ul{
     margin-left: -20px;
 }
   
-
+.button:hover {
+    background-color:skyblue;
+    color: black;
+}
 .main
 {
     align-content: center;
