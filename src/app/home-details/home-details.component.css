@@ -4,7 +4,7 @@
     border-bottom: dotted;
 }
 .content{
-    width: 400px;
+width:400px;
 }
 .button {
     background-color:red;
@@ -14,11 +14,11 @@
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 25px;
-    width: 165px;    
+    width: 165px;   
 }
 .main
 {
-    align-content:center;
+    align-content: center;
     justify-content: center ;
     display: grid ;
     padding: 4px;
@@ -28,11 +28,28 @@
     background-color: #03aa6c;
     height: 20px;
     font-size: 10px;
-    text-align: center;
+    text-align: right;
     padding: 4px;
 }
 .bar{
     margin-top: 30px;
+    text-align: right;
     background-color: whitesmoke;
     height: 20px;
+}
+.ui-datepicker-calendar 
+{
+    display: none;
+}
+.date-own form-control{
+    width: 300px;
+}
+.error{
+    color: red;
+}
+button[disabled],
+button.disabled {
+    color: white;
+    background: grey !important;
+    border: 1px solid #CCC;
 }
