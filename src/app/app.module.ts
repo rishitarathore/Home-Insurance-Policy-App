@@ -16,7 +16,7 @@ import { VehicleInsuranceComponent } from './vehicle-insurance/vehicle-insurance
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { CustomerDetailsTwoComponent } from './customer-details-two/customer-details-two.component';
 import { HomeDetailsComponent } from './home-details/home-details.component';
-
+import { PaymentComponent } from './payment/payment.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,13 +32,13 @@ import { HomeDetailsComponent } from './home-details/home-details.component';
     CustomerDetailsComponent,
     CustomerDetailsTwoComponent,
     HomeDetailsComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
-    
+    ReactiveFormsModule,    
   ],
   providers: [],
   bootstrap: [AppComponent]

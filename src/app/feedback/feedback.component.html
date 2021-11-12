@@ -4,6 +4,9 @@
   <form #feedbackForm="ngForm">
 
     <!-- {{ feedbackForm.value | json }} -->
+
+ 
+    
     <div class="form-group">
     Please help us to serve you better by taking a couple of minutes.<br><br>
 
@@ -21,10 +24,10 @@
 
         <div class="row">
           <div class="col">
-            <input type="text" class="form-control" name="name" placeholder="Your name"  ngModel required>
+            <input type="text" class="form-control" name="name" ngModel="{{fname +'  ' +lname}}" disabled required>
           </div>
           <div class="col">
-            <input type="email" class="form-control" placeholder="Your Email" name="email" ngModel required>
+            <input type="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Your Email" name="email" ngModel={{email}} disabled required>
           </div>
         </div>
 
@@ -34,3 +37,4 @@
         <div class="col center">
             <button type="button"  class="rounded-pill btn-block"  (click)="prev()" [disabled]="feedbackForm.form.invalid">Submit</button>
           
+ 

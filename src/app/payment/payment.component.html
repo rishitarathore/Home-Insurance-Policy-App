@@ -1,0 +1,89 @@
+<app-progress-bar [progress]="90 "></app-progress-bar>
+<div class="container col-md-7">
+    <div class="text-center">
+        <h1>Payment Gateway</h1><hr/>
+        <div class="row">
+        <div class="inlineimage"> <img class="img-responsive images" src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Mastercard-Curved.png"> <img class="img-responsive images" src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Discover-Curved.png"> <img class="img-responsive images" src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Paypal-Curved.png"> <img class="img-responsive images" src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/American-Express-Curved.png"> </div>
+    </div>
+    </div>
+    <div class="container col4">
+    <table class="table tb">
+      <tr class="tr1">
+      <td class="td1">          
+          <input [value]="0" name="radio" [(ngModel)]="radio" type="radio" id="rd1" [checked]="!isChecked">
+          <label for="radio" class="form-check-label" for="rd1">
+            PayPal
+          </label> 
+        </td>
+      </tr>
+      <div class="form-group" *ngIf="radio == 0">
+          <ng-template [ngTemplateOutlet]="mydiv"></ng-template>
+      </div>
+      <tr class="tr1">
+      <td class="td1">
+            <input [value]="1" name="radio" [(ngModel)]="radio" type="radio" id="rd2" [checked]="!isChecked">
+            <label for ="radio" class="form-check-label" for="rd2">
+              DebitCard
+            </label>    
+          </td>    
+        </tr>
+        <div class="form-group" *ngIf="radio == 1">
+                <ng-template [ngTemplateOutlet]="mydiv"></ng-template>
+        </div>
+        <tr class="tr1">  
+      <td class="td1" >
+              <input [value]="2" name="radio" [(ngModel)]="radio" type="radio" id="rd3" checked>
+              <label for="radio" class="form-check-label" for="rd3">
+                CreditCard
+              </label>  
+            </td>      
+          </tr> 
+          <div class="form-group" *ngIf="radio == 2">
+            <ng-template [ngTemplateOutlet]="mydiv"></ng-template>
+          </div>
+
+    </table>
+    
+      </div>
+</div>
+
+<ng-template #mydiv>
+    <form #userform="ngForm" (ngSubmit)="next()">
+
+     <div class="row">
+         <div class="col">
+        <label for="amt">Amount To be Paid</label><br>
+                 <input *ngIf="vehicledetails" style="font-weight: bold;background-color: white;" class="form-control" name="amt" value="$70" readonly>
+                <input *ngIf="!vehicledetails" style="font-weight: bold;background-color: white;" class="form-control" name="amt" value="$40" readonly>
+            </div>
+
+     </div><br>
+     <div class="row">
+         <div class="col">
+      <label for="cardnumber">CARD NUMBER</label>
+      <input type="tel" class="form-control" name="cardnumber" maxlength=16 minlength=15 pattern="[0-9]*" ngModel required #cardnumber="ngModel" placeholder="Enter Valid Card Number">
+      <div class="error" *ngIf="cardnumber.errors?.minlength">Enter valid Card Number</div>
+      <div class="error" *ngIf="cardnumber.errors?.pattern">Card number should not contain any Alphabets</div>
+    </div></div><br>
+      <div class="row">
+        <div class="col">
+      <label for="expiry">EXP DATE</label>
+      <input class="form-control" type="month" id="expiry" name="expiry" min="2020-03" value="2020-03" ngModel required #expiry="ngModel" ></div>
+      <div class="col">
+      <label for="cvv">CVV</label>
+      <input class="form-control" type="text" id="cvv" name="cvv" maxlength="3" minlength="3" pattern="[0-9]+" placeholder="CVV">
+      <div class="error" *ngIf="cardnumber.errors?.pattern">Enter valid CVV</div>
+      </div>
+      </div><br>
+      <div class="row">
+          <div class="col">
+            <label for="cardowner">CARD OWNER</label>
+            <input class="form-control" type="text" id="expiry" name="cardowner" minlength="3" maxlength="25" pattern="[A-Za-z]+"  ngModel required #cardowner="ngModel" placeholder="Card Owner Name">
+            <div class="error" *ngIf="cardowner.errors?.maxlength">Maximum length is 25 only. </div>
+            <div class="error" *ngIf="cardowner.errors?.minlength">Minimum length should be 5.</div>
+            <div class="error" *ngIf="cardowner.errors?.pattern">Name contains no numbers.</div>
+          </div>
+      </div><br>
+      <button id="bt6" type="button" class="rounded-pill btn-block" (click)="next()" [disabled]="userform.invalid" >Confirm Payment</button>
+</form>
+    </ng-template>

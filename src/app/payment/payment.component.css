@@ -1,0 +1,51 @@
+.container.col4
+{
+    background-color: #ECECEC;
+}
+#bt6{
+    background-color: red;
+    color:white;
+}
+.text-center{
+    color: #dc143c;  
+    padding-bottom: 10px;
+}
+.inlineimage {
+    max-width: 800px;
+    margin-right: 8px;
+    margin-left: 10px;
+    background-color: #ECECEC;
+}
+img{
+    display: inline-block;
+    max-width: 98%;
+    height: auto;
+    width: 22%;
+    margin: 1%;
+    left: 20px;
+    text-align: center
+}
+.error
+{
+    color:red;
+    font-size: small;
+}
+hr
+{
+    background-color:white;
+    border:1px dotted red;
+}
+.form-group
+{
+    background-color: white;
+    padding: 20px;
+}
+#bt6[disabled],
+#bt6.disabled {
+    color:white;
+    background: grey;
+    border: 1px solid #CCC;
+}
+.form-group{
+    font-weight: bold;
+}
