@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col" id="col1">
         <p style="font-weight: bold;">1. $40(Monthly Plan)</p>
-        <img style="float: left;" src="assets\images\gettyimages-183881669-612x612.jpg" alt="image">
+        <img class="image" style="float: left;" src="assets\images\gettyimages-183881669-612x612.jpg" alt="image">
         <p >Home <br>
         Insurance</p></div>
         <div class="vr"></div>
@@ -48,7 +48,7 @@
       <div class="col" id="col1">
       <p style="font-weight: bold;">2. $30(Monthly Plan)</p>
 
-      <img style="float: left;" src="assets\images\car-image.png" alt="image">
+      <img class="image" style="float: left;" src="assets\images\car-image.png" alt="image">
       <p >Vehicle <br>
         Insurance</p></div>
         <div class="vr"></div>
@@ -59,7 +59,7 @@
             <tr class="tr2">
             <td>Policy</td>
             <td>x1</td>
-            <td>$30</td>
+            <td>$32</td>
             </tr>
             <tr class="tr2">
             <td>1<sup>st</sup> Premium</td>
@@ -69,14 +69,14 @@
             <tr class="tr2" >
             <td>Tax</td>
             <td>x1</td>
-            <td>$3</td>
+            <td>$4</td>
             </tr>
         </table>
         <hr/>
         <table class="table table-borderless">
             <tr class="tr2">
                 <td>Total</td>
-                <td>$37</td>
+                <td>$40</td>
             </tr>
         </table>
 
@@ -84,32 +84,42 @@
   </div>
 <hr/>
 </div>
+
     <div class=" row">
         <div class="container col-8">
-            
+            <div *ngIf="!vehicledetails">
             <p style="font-weight: bold;">Do you want add Vehicle Insurance</p>
             <p id="p1" >(get 5% off on premium)</p>
               <div class="col-8">
-                <button  id="yes" type="button" (click) = "yes()" onclick="document.getElementById('no').setAttribute('disabled',true);" class="btn btn-success">Yes</button> 
+                <button  id="yes" type="button" (click) = "yes()"  onclick="document.getElementById('no').setAttribute('disabled',true);" class="btn btn-success">Yes</button> 
                 <button type="button" id="no" (click) = "no()" onclick="document.getElementById('yes').setAttribute('disabled',true);" class="btn btn-danger">No</button>
-                <div *ngIf="!vehicledetails">
                 <p *ngIf="textShow1">You will have 5% off on vehicle Insurance.If you want to proceed for taking vehicle insurance.<a href="vehicle-insurance">Proceed here!</a></p>
-                <p *ngIf="textShow2">You can proceed with your Home Insurance...</p></div>
+                <p *ngIf="textShow2">You can proceed with your Home Insurance...</p>
 
               </div>
-              
-            
-        </div>
+            </div>
+            <div *ngIf="vehicledetails">
+                <img id="car" style="float: left;" src="assets\images\car-insurance.jpg" alt="image">
+            </div>
+    </div>
         <div class="col-4">
             <p id="p2" style="font-size: 20px;color: skyblue;">Promo <br>
                 Code?</p>
             <div class="col">
             <input style="border-radius:5px;width:100%;border-color: skyblue;" value="TAB100">
-            <button id="bt" type="button" class="rounded-pill btn-block">Apply</button>
+            <div *ngIf="vehicledetails">
+            <p>Use Promocode to avail 5% Discount on Vehicle Insurance</p>
+           <button id="bt" type="button" class="rounded-pill btn-block" (click)="apply()">Apply</button>
+            </div>
+            <div *ngIf="!vehicledetails">
+                <button id="bt" type="button" class="rounded-pill btn-block" disabled>Apply</button>
+            </div>
              </div>
 
-    </div>
+        </div> 
 </div>
 <hr/>
+
+
 <button id="bt6" type="button" class="rounded-pill btn-block" (click)="next()">Continue for Payment</button>
 </div>

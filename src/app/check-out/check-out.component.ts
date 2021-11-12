@@ -4,6 +4,8 @@ import { VehicleInsuranceComponent } from '../vehicle-insurance/vehicle-insuranc
 import { ActivatedRoute } from '@angular/router';
 import { FormGroup } from '@angular/forms';
 import { HomeDetailsComponent } from '../home-details/home-details.component';
+import Swal from 'sweetalert2'; 
+
 @Component({
   selector: 'app-check-out',
   templateUrl: './check-out.component.html',
@@ -13,7 +15,7 @@ export class CheckOutComponent implements OnInit {
   public textShow1 =false;
   public textShow2 =false;
   public vehicledetails=false;
-
+   public promocode=false;
   constructor(private router:Router,private route:ActivatedRoute) { 
     this.route.queryParams.subscribe(params => {
       this.vehicledetails = params["userform"];
@@ -41,6 +43,17 @@ export class CheckOutComponent implements OnInit {
     };
     this.router.navigate(['payment'],navigationExtras);
    
+  }
+  apply(){
+    
+  this.promocode=true;
+  let navigationExtras: NavigationExtras = {
+    queryParams: {
+        "vehicledetails": this.vehicledetails,
+        "promocode":this.promocode
+    }
+  };
+this.router.navigate(['payment'],navigationExtras);
   }
   
 }
