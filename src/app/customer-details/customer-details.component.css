@@ -71,3 +71,6 @@ button.disabled {
     border-radius: 25px;
     width: 165px;   
 }
+.error{
+    color: red;
+}

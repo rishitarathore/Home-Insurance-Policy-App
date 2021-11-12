@@ -17,10 +17,7 @@
       <option value="Bussiness analyst">Bussiness analyst</option>
       <option value="Free lancer">Free lancer</option>
     </select><br><br>
-    <label for="Location">Location:</label><br>
-            <input ngModel required type="text" id="Location" name="Location"><br><br>
-            <label for="Street">Street:</label><br>
-            <input ngModel required  type="text" id="Street" name="Street"><br><br>
+   
             <label for="Marital status">Marital status:</label>
             <select ngModel name="Marital status" required id="Marital status">
             <option value="Married">Married</option>
@@ -45,10 +42,25 @@
             
          
             </form>
+            <label for="DOB">DOB:</label>
+
+            <br> <input type="date" [(ngModel)]="age" (ngModelChange)="ageCalculator()" /><br>
+
+            <br><label>Age:</label>
+
+
+
+            <br><input type="number" disabled placeholder="{{ showAge }}" />
+
+            <br/><br/>
+         
+            
+           
+         
         </div>
         <div >
             <button class="button" color="warn" (click)="prev()">BACK</button>
-            <button class="button" color="warn" Type="submit" [disabled]="myform.form.invalid">CONTINUE </button>
+            <button class="button" color="warn" (click)="next()" Type="submit" [disabled]="myform.form.invalid">CONTINUE </button>
         </div>
         
     </div>
