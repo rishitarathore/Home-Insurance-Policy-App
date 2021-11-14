@@ -1,8 +1,9 @@
+ 
 <div class="main"> 
  
     <div class="bar">
      
-    <div class="progress" aria-valuemin="0" aria-valuemax="100" style ="width:30%">30%</div>
+    <div class="progress" aria-valuemin="0" aria-valuemax="100" style ="width:20%">20%</div>
     <div>
     <h1 style="color:red"> Customer Details </h1>
     <p style="color: red;">...............................................................................................</p>
@@ -25,11 +26,33 @@
             <input ngModel required  type="text" id="lname" name="lname"><br><br>
             <label for="mail">Mailing Address:</label><br>
             <input ngModel required type="text" id="mail" name="mail"><br><br>
-            <label for="city">City:</label><br>
-            <input ngModel required type="text" id="city" name="city"><br>
+            <div class="row">      
+                <div class="col">   
+                    <label for="city">City:</label>   
+                    <input type="text" class="form-control" name="city" maxlength=15 minlength="4" pattern="[a-z]*" ngModel required #cardnumber="ngModel" placeholder="Enter Valid city">   
+                    <div class="error" *ngIf="cardnumber.errors?.minlength">Enter valid city</div>   
+                    <div class="error" *ngIf="cardnumber.errors?.pattern">city should not contain any number
+                    </div> 
+                </div>
+            </div><br>
+            
+
+
             <label for="state">State:</label><br>
             <input ngModel required type="text" id="state" name="state"><br>
-           
+            <div class="row">
+
+                <div class="col">
+       
+             <label for="zip code">Zip code:</label><br>
+       
+             <input type="tel" class="form-control" name="zipcode" maxlength=6 minlength="3" pattern="[0-9]*" ngModel required #zipcode="ngModel" placeholder="Enter Valid zip code">
+       
+             <div class="error" *ngIf="zipcode.errors?.minlength">Enter valid Zip code</div>
+       
+             <div class="error" *ngIf="zipcode.errors?.pattern">code should not contain any Alphabets</div>
+       
+           </div></div><br>
             <label for="Location">Location:</label><br>
             <input ngModel required type="text" id="Location" name="Location"><br><br>
             <label for="Street">Street:</label><br>
@@ -41,7 +64,7 @@
         
        
         <div>
-            <button  class="button" color="warn">BACK</button>
+            <button  class="button" color="warn" (click)="prev()">BACK</button>
             <button class="button" color="warn" (click)="next()" Type="submit" [disabled]="myform.form.invalid">CONTINUE </button>
         </div>
         

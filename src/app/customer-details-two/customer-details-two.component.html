@@ -32,13 +32,25 @@
     <input  type="checkbox" id="Others" name="Others" value="Others">
     <label for="Others"> Others</label><br><br>
      
-    <label for="Phone">Phone:</label><br>
-    <input  ngModel required  type="number"  name="Phone"><br><br>
-    <label for="Alternate number">Alternate number:</label><br>
-    <input ngModel required  type="number"  name="Alternate number"><br><br>
     
+
+       
+ <div class="row">
+
+    <div class="col">
+  
+  <label for="phone number">Phone number:</label><br>
+  
+  <input type="tel" class="form-control" name="phone number" maxlength=10 minlength="9" pattern="[0-9]*" ngModel required #phonenumber="ngModel" placeholder="Enter Valid phone number">
+  
+  <div class="error" *ngIf="phonenumber.errors?.minlength">Enter valid number</div>
+  
+  <div class="error" *ngIf="phonenumber.errors?.pattern">number should not contain any Alphabets</div>
+  
+  </div></div><br>
     
-    
+  <label for="Alternate number">Alternate number:</label><br>
+  <input ngModel required  type="number"  name="Alternate number"><br><br>      
             
          
             </form>
