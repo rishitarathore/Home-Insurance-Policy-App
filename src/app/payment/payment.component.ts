@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { PaymentSuccessfulComponent } from '../payment-successful/payment-successful.component';
 import { Input } from '@angular/core';
 import { CheckOutComponent } from '../check-out/check-out.component';
-import Swal from 'sweetalert2'; 
 
 @Component({
   selector: 'app-payment',
