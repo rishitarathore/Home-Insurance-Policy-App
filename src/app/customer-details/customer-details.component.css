@@ -52,25 +52,21 @@ body{
   }
   button[disabled],
 
-button.disabled {
+button[disabled],button.disabled {
 
     color: white;
 
-    background: grey !important;
+    background: grey;
 
     border: 1px solid #CCC;
 
 }
-.button {
-    background-color:red;
-    color:white;
-    padding: 10px 10px;
-    text-align: center;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 25px;
-    width: 165px;   
-}
+
 .error{
     color: red;
+}
+hr
+{
+    background-color:white;
+    border:1px dotted red;
 }

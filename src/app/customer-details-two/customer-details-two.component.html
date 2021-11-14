@@ -1,37 +1,45 @@
-<div class="main">
-    <div class="bar">
-        <div class="progress"aria-valuemax="0" aria-valuemax="100" style="width:30%">30%</div>
+<app-progress-bar [progress]="30"></app-progress-bar>
+<div class="container col-md-7">
+    
     <div>
     <h1 style="color:red"> Customer Information</h1>
-    <p style="color: red;">................................................................................................</p>
+    <hr>
     </div>
        <div>
         <form #myform="ngForm">
             <label for="Occupation">Occupation:</label>
     
-    <select ngModel name="occupation" required id="Occupation">
+    <select  class="form-control" name="occupation" ngModel required id="Occupation">
       <option value="Doctor">Doctor</option>
       <option value="Engineer">Engineer</option>
       <option value="Artist">Artist</option>
       <option value="Social worker">Social worker</option>
       <option value="Bussiness analyst">Bussiness analyst</option>
       <option value="Free lancer">Free lancer</option>
-    </select><br><br>
+    </select><br>
    
             <label for="Marital status">Marital status:</label>
-            <select ngModel name="Marital status" required id="Marital status">
+            <select class="form-control" name="Marital status" ngModel  required id="Marital status">
             <option value="Married">Married</option>
             <option value="Unmarried">Unmarried</option>
      
-            </select><br><br>  
-            <label for="Gender">Gender:</label><br>
-            <input type="checkbox" id="Male" name="Male" value="boy">
-    <label for="Male"> Male</label><br>
-    <input  type="checkbox" id="Female" name="Female" value="girl">
-    <label for="Female"> Female</label><br>
-    <input  type="checkbox" id="Others" name="Others" value="Others">
-    <label for="Others"> Others</label><br><br>
-     
+            </select><br>
+            <label for="radio">Gender:</label><br>
+        <label>
+            <input type="radio" name="radio" id="radio" >
+            Male
+         </label>
+         <label>
+            <input type="radio" name="radio" id="radio" >
+            Female
+         </label>
+         <label>
+            <input type="radio" name="radio" id="radio" >
+            Other
+         </label><br/>
+
+            
+            
     
 
        
@@ -49,30 +57,39 @@
   
   </div></div><br>
     
-  <label for="Alternate number">Alternate number:</label><br>
-  <input ngModel required  type="number"  name="Alternate number"><br><br>      
-            
+  <label for="number">Alternate number:</label><br>
+  <input class="form-control" ngModel required  type="tel"  name="number" #number="ngModel"><br>
+  <div class="error" *ngIf="number.errors?.minlength">Enter valid number</div>
+  
+  <div class="error" *ngIf="number.errors?.pattern">number should not contain any Alphabets</div>
+
+</form>
+  
          
-            </form>
             <label for="DOB">DOB:</label>
 
-            <br> <input type="date" [(ngModel)]="age" (ngModelChange)="ageCalculator()" /><br>
+            <br> <input type="date" class="form-control" [(ngModel)]="age" (ngModelChange)="ageCalculator()" ngModel required/>
 
             <br><label>Age:</label>
 
 
 
-            <br><input type="number" disabled placeholder="{{ showAge }}" />
+            <br><input class="form-control" type="number" disabled placeholder="{{ showAge }}" />
 
-            <br/><br/>
-         
+            <br/>
             
            
          
-        </div>
-        <div >
-            <button class="button" color="warn" (click)="prev()">BACK</button>
-            <button class="button" color="warn" (click)="next()" Type="submit" [disabled]="myform.form.invalid">CONTINUE </button>
-        </div>
         
+        <div class="row">
+            <div class="col">
+                <button class="rounded-pill btn-block" color="warn" (click)="prev()">BACK</button>
+            </div>
+            <div class="col">
+            <button class="rounded-pill btn-block" color="warn" (click)="next()" Type="submit" [disabled]="myform.form.invalid">CONTINUE </button>
+        </div></div>
+
+        </div>
+
     </div>
+        
