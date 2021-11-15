@@ -1,16 +1,15 @@
-<div class="main">
+<br>
+<app-progress-bar [progress]="50"></app-progress-bar>
+
+<div class="container col-md-7">
+    
     <form #Structure="ngForm">
-             
-    <div class="content">
-        <div class="bar">
-            <div class="progress" aria-valuemin="0" aria-valuemax="100" style ="width:50%">50%</div>
-        </div>
         <div class="dotline">
             <h1>Home Structure Details</h1>
         </div>
         <br>
     <div class="form-group">
-        <label class="field name">HOUSE FRAMING</label>
+        <label class="field name"><b>House Framing</b></label>
         <select class="form-control" ngModel name="Framing" required>
             <option value="" disabled selected>Select an Option</option>
             <option value="steel">Steal</option>
@@ -22,7 +21,7 @@
     </div>
     
     <div class="form-group">
-        <label class="field name">WINDOW</label>
+        <label class="field name"><b>Window</b></label>
         <select class="form-control" ngModel name="Window" required>
             <option value="" disabled selected>Select an Option</option>
             <option value="vinyl">Vinyl</option>
@@ -35,7 +34,7 @@
     </div>
     
     <div class="form-group">
-        <label class="field name">CEILING</label>
+        <label class="field name"><b>Ceiling</b></label>
         <select class="form-control" ngModel name="Ceiling" required>
             <option value="" disabled selected>Select an Option</option>
             <option value="no">No</option>
@@ -49,7 +48,7 @@
     </div>
 
     <div class="form-group">
-        <label class="field name">HOUSE STYLE</label>
+        <label class="field name"><b>House Style</b></label>
         <select class="form-control" ngModel name="Floors" required>
             <option value="" disabled selected>Select an Option</option>
             <option value="Marbles">Marbles</option>
@@ -60,7 +59,7 @@
     </div>
     
     <div class="form-group">
-        <label class="field name">FLOORS</label>
+        <label class="field name"><b>Floors</b></label>
         <select class="form-control" ngModel name="Style" required>
             <option value="" disabled selected>Select an Option</option>
             <option value="1">1</option>
@@ -76,7 +75,7 @@
     </div>
 
     <div class="form-group">
-        <label for="sel3">ROOFING STYLE</label>
+        <label for="sel3"><b>Roofing Style</b></label>
         <select class="form-control" ngModel name="Roofing" required>
             <option value="" disabled selected>Select an Option</option>
             <option value="Metal">Metal Roofing</option>
@@ -88,12 +87,15 @@
             <option value="Other">Other</option>
         </select>
     </div>
-    </div>
     </form>
     <br>
-    <div class="footer">
-        <button class="button" (click)="prev()">Back</button>
-        <button class="button" style="float: right;" (click)="next()" [disabled]="Structure.form.invalid" type="submit"> Continue</button>
+    <div class="row">
+        <div class="col"> 
+            <button class="rounded-pill btn-block" color="warn" (click)="prev()">Back</button>
+        </div>
+        <div class="col">
+            <button class="rounded-pill btn-block" color="warn"  (click)="next()" [disabled]="Structure.form.invalid" type="submit"> Continue</button>
+        </div>
     </div>
-</div>
+
   
