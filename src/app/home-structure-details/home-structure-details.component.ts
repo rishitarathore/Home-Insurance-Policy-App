@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
   templateUrl: './home-structure-details.component.html',
   styleUrls: ['./home-structure-details.component.css']
 })
+
 export class HomeStructureDetailsComponent implements OnInit {
 
   constructor(private router:Router) { }

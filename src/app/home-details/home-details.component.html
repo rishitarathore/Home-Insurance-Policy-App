@@ -1,18 +1,18 @@
-<div class="main">
+<br>
+<app-progress-bar [progress]="40"></app-progress-bar>
+<div class="container col-md-7">
     <form #Form="ngForm">
-             
-    <div class="content">
-        <div class="bar">
-            <div class="progress" aria-valuemin="0" aria-valuemax="100" style ="width:40%">40%</div>
-        </div>
-        <div class="dotline">
-                <h1> Home Details </h1>
+     <br>        
+     
+
+     <div class="dotline">
+            <h1> Home Details </h1>
         </div>
     
         <br>
     
     <div class="form-group">
-        <label class="field name" for="name">Property Holder Name</label>
+        <label class="field name" for="name"> <b> Property Holder Name</b></label>
         
         <input class="form-control" minlength="3" maxlength="50" type="text" 
         name="name" placeholder="Enter Name minimum 3 characters" ngModel required #name="ngModel" pattern="[A-Z a-z]+">
@@ -25,7 +25,7 @@
     </div>
     
     <div class="form-group">
-        <label class="field name">Complete Address</label>
+        <label class="field name"> <b> Complete Address</b></label>
         <textarea placeholder="Enter Address with minimum 10 letters" class="form-control" rows="3" 
         type="text" minlength="10" name="address" ngModel required></textarea>
         <div *ngIf="name.errors?.minlength" class="error">
@@ -34,12 +34,12 @@
     </div>
 
     <div class="form-group">
-        <label class="field name">Landmark</label>
+        <label class="field name"> <b> Landmark</b></label>
         <input placeholder="Nearest to Location" type="text" class="form-control" name="Landmark" ngModel required>
     </div>
     
     <div class="form-group">
-        <label class="field name">House Area (in Sq.Ft)</label>
+        <label class="field name"> <b> House Area (in Sq.Ft)</b></label>
         <select class="form-control" name="area" ngModel required>
             <option value="" disabled selected>Select an Option</option>
             <option value="1">500-600</option>
@@ -83,11 +83,11 @@
     </div>
 
     <div class="form-group">
-        <label class="field name">House Built Year</label>
-        <input type="date" class="form-control" ngModel required>
+        <label class="field name"><b>House Built Year</b></label>
+        <input type="month" class="form-control" ngModel required>
     </div>
     <div class="form-group">
-        <label class="field name">Total Rooms</label>
+        <label class="field name"><b>Total Rooms</b></label>
         <select name="rooms" class="form-control" ngModel required aria-placeholder="Select Rooms">
             <option value="" disabled selected>Select an Option</option>
             <option value="1">1-5</option>
@@ -100,12 +100,15 @@
             <option value="8">35+</option>
         </select>
     </div>
-    </div>
     </form>
     <br>
-    <div class="footer">
-        <button class="button" (click)="prev()">Back</button>
-        <button class="button" style="float: right;" (click)="next()" type="submit" [disabled]="Form.form.invalid"> Continue</button>
+    <div class="row">
+        <div class="col">
+            <button class="rounded-pill btn-block" color="warn" (click)="prev()">Back</button>
+        </div>
+        <div class="col">
+            <button class="rounded-pill btn-block" color="warn" (click)="next()" type="submit" [disabled]="Form.form.invalid"> Continue</button>
+        </div>
     </div>
 </div>
   
