@@ -1,73 +1,57 @@
-<app-progress-bar [progress]="20"></app-progress-bar>
-
-<div class="container col-md-7"> 
- 
-    <div class="bar">
-    <div>
+<app-progress-bar [progress]=20></app-progress-bar>
+<div class="container col-7">
     <h1 style="color:red"> Customer Details </h1>
     <hr/>
-    </div>
-       <div>
-        <form #myform="ngForm">
-            <div class="form-group">
-                <label class="field name" for="name">First Name</label>
-                
-                <input class="form-control" minlength="3" maxlength="50" type="text" 
-                name="name" placeholder="Enter Name minimum 3 characters" ngModel required #name="ngModel" pattern="[A-Z a-z]+"><br>
-                <div *ngIf="name.errors?.pattern" class="error">
-                    Name should be in Text
-                </div>
-                <div *ngIf="name.errors?.minlength" class="error">
-                    Name should be minimum 3 characters
-                </div>  
-            </div>
-            <label for="lname">Last name:</label><br>
-            <input class="form-control" ngModel required  type="text" id="lname" name="lname"  #lname="ngModel"><br>
-             <label for="city">City:</label>   
-                    <input class="form-control" type="text" class="form-control" name="city" maxlength=15 minlength="4" pattern="[a-z]*" ngModel required #cardnumber="ngModel" placeholder="Enter Valid city">   
-                    <div class="error" *ngIf="cardnumber.errors?.minlength">Enter valid city</div>   
-                    <div class="error" *ngIf="cardnumber.errors?.pattern">city should not contain any number
-                    </div> 
-                <br>
-            
+    <form #myform="ngForm" (ngSubmit)="next()">
+        <div class="form-group">
+        <label for="fname">First name:</label>
 
+        <input  class="form-control" type="text" id="fname" name="fname" [(ngModel)]="customerModel.fname"></div>
+        <div class="form-group">
 
-            <label for="state">State:</label><br>
-            <input class="form-control" ngModel required type="text" id="state" name="state" #state="ngModel"><br>
-            <div class="row">
+        <label for="lname">Last name:</label>
 
-                <div class="col">
-       
-             <label for="zip code">Zip code:</label><br>
-       
-             <input type="tel" class="form-control" name="zipcode" maxlength=6 minlength="3" pattern="[0-9]*" ngModel required #zipcode="ngModel" placeholder="Enter Valid zip code">
-       
-             <div class="error" *ngIf="zipcode.errors?.minlength">Enter valid Zip code</div>
-       
-             <div class="error" *ngIf="zipcode.errors?.pattern">code should not contain any Alphabets</div>
-       
-           </div></div><br>
-            <label for="Location">Location:</label><br>
-            <input class="form-control" ngModel required type="text" id="Location" name="Location" #Location="ngModel"><br>
-            <label for="Street">Street:</label><br>
-            <input class="form-control" ngModel required  type="text" id="Street" name="Street" #Street="ngModel"><br>
-            <label for="EmailID">Email-ID:</label><br>
-            <input class="form-control" ngModel required type="email" pattern="[^ @]*@[^ @]*" id="EmailID" name="EmailID" #Emailid="ngModel">
-            
-            <br>
-            </form>
-           
-        
-       
-        <div class="row">
-                <div class="col">
-                    <button  class="rounded-pill btn-block" color="warn"  (click)="prev()">BACK</button>
-                </div>
-                <div class="col">
-                    <button class="rounded-pill btn-block" color="warn" (click)="next()" Type="submit" [disabled]="myform.form.invalid">CONTINUE </button>
-                </div>
-            </div>
+        <input class="form-control" type="text" id="lname" name="lname" [(ngModel)]="customerModel.lname"></div>
+        <div class="form-group">
+      
+        <label for="mail">Mailing Address:</label>
 
+        <input class="form-control" type="text" id="mail" name="mail"><br>
+
+        <input class="form-control" type="text" id="mail" name="mail"></div>
+
+       
+        <div class="form-group">
+
+        <label for="city">City:</label>
+
+        <input class="form-control"  type="text" id="city" name="city"></div>
+        <div class="form-group">
+
+        <label for="state">State:</label>
+
+        <input class="form-control" type="text" id="state" name="state"></div>
+        <div class="form-group">
+
+        <label for="zip">Zip-Code:</label>
+
+        <input class="form-control" type="text" id="zip" name="zip"></div>
+        <div class="form-group">
+
+        <label for="dob">Date of Birth:</label>
+
+        <input class="form-control" type="date" id="dob" name="dob"></div>
+        <div class="form-group">
+
+        <label for="email">Email ID:</label>
+
+        <input class="form-control" type="email" id="email" name="email" [(ngModel)]="customerModel.email"></div>
+
+        <div class="footer">
+            <button class="button" (click)="prev()">Back</button>
+            <button style="float: right" id="button" 
+            class="button" 
+            (click)="next()" type="submit"> Continue</button>
         </div>
-        
-        
+</form>
+</div>
