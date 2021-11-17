@@ -17,7 +17,7 @@
       <option value="Free lancer">Free lancer</option>
     </select><br>
    
-            <label for="Marital status">Marital status:</label>
+            <label for="Marital status"><b>Marital status:</b></label>
             <select class="form-control" name="Marital status" ngModel  required id="Marital status">
             <option value="Married">Married</option>
             <option value="Unmarried">Unmarried</option>
@@ -25,15 +25,17 @@
             <option value="Unmarried">Widow</option>
      
             </select><br>
-            <label for="radio">Gender:</label><br>
+            <label for="radio"><b>Gender:</b></label><br>
         <label>
             <input type="radio" name="radio" id="radio" >
             Male
          </label>
+         <br> 
          <label>
             <input type="radio" name="radio" id="radio" >
             Female
          </label>
+         <br>
          <label>
             <input type="radio" name="radio" id="radio" >
             Other
@@ -48,7 +50,7 @@
 
     <div class="col">
   
-  <label for="phone number">Phone number:</label><br>
+  <label for="phone number"><b>Phone number:</b></label><br>
   
   <input type="tel" class="form-control" name="phone number" maxlength=10 minlength="9" pattern="[0-9]*" ngModel required #phonenumber="ngModel" placeholder="Enter Valid phone number">
   
@@ -58,20 +60,19 @@
   
   </div></div><br>
     
-  <label for="number">Alternate number:</label><br>
-  <input class="form-control" ngModel required  type="tel"  name="number" #number="ngModel"><br>
+  <label for="number"><b>Alternate number:</b></label><br>
+  <input class="form-control" ngModel required  type="tel"  name="number" minlength="9" maxlength="10" #number="ngModel"><br>
+  <div class="error" *ngIf="number.errors?.maxlength">Enter valid number</div>
   <div class="error" *ngIf="number.errors?.minlength">Enter valid number</div>
-  
-  <div class="error" *ngIf="number.errors?.pattern">number should not contain any Alphabets</div>
 
 </form>
   
          
-            <label for="DOB">DOB:</label>
+            <label for="DOB"><b>DOB:</b></label>
 
             <br> <input type="date" class="form-control" [(ngModel)]="age" (ngModelChange)="ageCalculator()" ngModel required/>
 
-            <br><label>Age:</label>
+            <br><label><b>Age:</b></label>
 
 
 
